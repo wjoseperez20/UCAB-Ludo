@@ -62,7 +62,7 @@ namespace LudoServer.Services
 
             _server = (TcpListener)AsyncResult.AsyncState;
             TcpClient Client_Incoming = null;
-            Gamer _gamer;
+            Player _player;
 
             try
             {
@@ -72,8 +72,8 @@ namespace LudoServer.Services
                 Client_Incoming = _server.EndAcceptTcpClient(AsyncResult);
                 _server.BeginAcceptTcpClient(AceptandoCliente, _server);
 
-                _gamer = new Gamer();
-                _gamer.Client = Client_Incoming;
+                _player = new Player();
+                _player.Client = Client_Incoming;
 
                 MessageBox.Show("MI primera conexion", "¡Atencion!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 

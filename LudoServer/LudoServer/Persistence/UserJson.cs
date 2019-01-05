@@ -16,30 +16,29 @@ namespace LudoServer.Persistence
         public UserJson(Game game)
         {
             _game = game;
-            LoadGamers();
+            LoadPlayers();
         }
 
-        private void LoadGamers()
+        private void LoadPlayers()
         {
-            using (StreamReader JsonFile = new StreamReader(@"jugadores.txt"))
+            using (StreamReader JsonFile = new StreamReader(@"Players.txt"))
             {
                 string json = JsonFile.ReadToEnd();
-                List<Gamer> _gamers = new List<Gamer>();
-                _gamers.Clear();
-                _gamers = JsonConvert.DeserializeObject<List<Gamer>>(json);
+                List<Player> _players = new List<Player>();
+                _players.Clear();
+                _players = JsonConvert.DeserializeObject<List<Player>>(json);
 
-                if (_gamers != null)
+                if (_players != null)
                 {
                     _game.PlayersRegistered.Clear();
-                    _game.PlayersRegistered = _gamers;
+                    _game.PlayersRegistered = _players;
                 }
             }
         }
 
-        //todo hacer todo esto y pasar esto
-        public bool RegistrarJugador(Gamer gamer)
+        public bool RegisterPlayer(Player player)
         {
-            if (VerificarExiste(gamer))
+            if (Exist(player))
                 return false;
 
             if (_game.Connected)
@@ -47,20 +46,21 @@ namespace LudoServer.Persistence
 
             if (_game.PlayersRegistered.Count < 1)
             {
-                gamer.Id = 1;
+                player.Id = 1;
             }
             else
             {
-                gamer.Id = (_game.PlayersRegistered.OrderBy(j => j.Id).Last().Id + 1);
+                player.Id = (_game.PlayersRegistered.OrderBy(j => j.Id).Last().Id + 1);
             }
 
-            _game.PlayersRegistered.Add(gamer);
+            _game.PlayersRegistered.Add(player);
 
             JsonSerializer serializer = new JsonSerializer();
 
-            File.Delete(@"jugadores.txt");
+            File.Delete(@"Players.txt");
 
-            using (StreamWriter jsonFile = File.AppendText(@"jugadores.txt"))
+            using (StreamWriter jsonFile = File.AppendText(@"Players.txt"))
+
             using (JsonWriter writer = new JsonTextWriter(jsonFile))
             {
                 serializer.Serialize(writer, _game.PlayersRegistered);
@@ -70,12 +70,12 @@ namespace LudoServer.Persistence
 
         }
 
-        private bool VerificarExiste(Gamer gamer)
+        private bool Exist(Player player)
         {
-            bool exist = _game.PlayersRegistered.Exists(j => j.User.ToLower() == gamer.User.ToLower());
+            bool exist = _game.PlayersRegistered.Exists(j => j.User.ToLower() == player.User.ToLower());
 
             return exist;
         }
     }
 }
-}
+

@@ -7,7 +7,7 @@ using System.Net.Sockets;
 
 namespace LudoServer.Common.Entities
 {
-   public class Gamer
+   public class Player
     {
         private int _id;
         private string _user;
@@ -20,7 +20,7 @@ namespace LudoServer.Common.Entities
         private int _turn;
         private Chip _chip;
 
-        public Gamer()
+        public Player()
         {
             this._position = 0;
             this._turn_active = false;

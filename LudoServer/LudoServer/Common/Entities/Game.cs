@@ -9,8 +9,8 @@ namespace LudoServer.Common.Entities
 {
     public class Game
     {
-        public List<Gamer> PlayersRegistered;
-        public List<Gamer> PlayersConnected;
+        public List<Player> PlayersRegistered;
+        public List<Player> PlayersConnected;
         public List<Chip> Chips;
         public bool Connected;
         private int _countGamers;
@@ -24,7 +24,7 @@ namespace LudoServer.Common.Entities
             InitValues();
         }
 
-        public static Game ObtenerJuego
+        public static Game GetGame
         {
             get
             {
@@ -39,9 +39,9 @@ namespace LudoServer.Common.Entities
 
         private void InitValues()
         {
-            PlayersRegistered = new List<Gamer>();
+            PlayersRegistered = new List<Player>();
 
-            PlayersConnected = new List<Gamer>();
+            PlayersConnected = new List<Player>();
 
             Chips = new List<Chip>();
 
