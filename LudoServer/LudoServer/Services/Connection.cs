@@ -22,7 +22,7 @@ namespace LudoServer.Services
         private ServerView _form;
         private Game _game;
         private MessageManager _messageManager;
-        private PackageClient _paquete;
+        private PackageClient _packageClient;
 
         public bool Create_Connection(ServerView form, int countGamers, Game game)
         {
@@ -45,7 +45,7 @@ namespace LudoServer.Services
 
                 _game = game;
 
-                _server.BeginAcceptTcpClient(AceptandoCliente, _server);
+                _server.BeginAcceptTcpClient(AcceptingClient, _server);
 
                 return true;
             }
@@ -57,7 +57,7 @@ namespace LudoServer.Services
 
         }
 
-        private void AceptandoCliente(IAsyncResult AsyncResult)
+        private void AcceptingClient(IAsyncResult AsyncResult)
         {
 
             _server = (TcpListener)AsyncResult.AsyncState;
@@ -70,7 +70,7 @@ namespace LudoServer.Services
                     return;
 
                 Client_Incoming = _server.EndAcceptTcpClient(AsyncResult);
-                _server.BeginAcceptTcpClient(AceptandoCliente, _server);
+                _server.BeginAcceptTcpClient(AcceptingClient, _server);
 
                 _player = new Player();
                 _player.Client = Client_Incoming;

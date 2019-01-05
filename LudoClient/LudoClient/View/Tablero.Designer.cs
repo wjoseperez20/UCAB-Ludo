@@ -1,6 +1,6 @@
 ﻿namespace LudoClient
 {
-    partial class Form1
+    partial class Tablero
     {
         /// <summary>
         /// Required designer variable.
