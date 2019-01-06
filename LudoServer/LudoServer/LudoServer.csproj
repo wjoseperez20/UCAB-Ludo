@@ -54,6 +54,8 @@
     <Compile Include="Common\Entities\Dice.cs" />
     <Compile Include="Common\Entities\Game.cs" />
     <Compile Include="Common\Entities\Player.cs" />
+    <Compile Include="Logic\Message\Core\Constants\InputCipher.cs" />
+    <Compile Include="Logic\Message\Core\Constants\OutputCipher.cs" />
     <Compile Include="Logic\Message\Core\Interfaces\IMessageInput.cs" />
     <Compile Include="Logic\Message\Core\Interfaces\IMessageOutput.cs" />
     <Compile Include="Logic\Message\Core\PackageClient.cs" />
@@ -97,7 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\Exceptions\" />
-    <Folder Include="Logic\Message\Core\Constants\" />
     <Folder Include="Logic\Message\Input\" />
     <Folder Include="Logic\Message\Output\" />
   </ItemGroup>

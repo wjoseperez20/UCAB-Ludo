@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LudoClient.View;
 
 namespace LudoClient
 {
@@ -16,7 +17,7 @@ namespace LudoClient
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Tablero());
+            Application.Run(new LogIn());
         }
     }
 }

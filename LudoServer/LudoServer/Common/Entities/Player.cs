@@ -98,7 +98,7 @@ namespace LudoServer.Common.Entities
             {
                 lock (_client)
                 {
-                    string[] package = IMessageOutput.GetMensaje();
+                    string[] package = IMessageOutput.GetMessage();
 
                     if (!_client.Connected)
                         return;

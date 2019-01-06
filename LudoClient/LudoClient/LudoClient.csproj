@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,11 +47,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Common\Entities\Chip.cs" />
+    <Compile Include="Common\Entities\Game.cs" />
+    <Compile Include="Common\Entities\Player.cs" />
+    <Compile Include="Logic\Message\Core\BuiltOutputPackage.cs" />
+    <Compile Include="Logic\Message\Core\Constants\InputCipher.cs" />
+    <Compile Include="Logic\Message\Core\Constants\OutputCipher.cs" />
+    <Compile Include="Logic\Message\Core\Interfaces\IMessageInput.cs" />
+    <Compile Include="Logic\Message\Core\Interfaces\IMessageOutput.cs" />
+    <Compile Include="Logic\Message\Core\MessageManager.cs" />
+    <Compile Include="Logic\Message\Core\PackageServer.cs" />
+    <Compile Include="Logic\Message\Input\Input_CreatePlayer.cs" />
+    <Compile Include="Logic\Message\Output\Output_CreatePlayer.cs" />
+    <Compile Include="Services\Connection.cs" />
+    <Compile Include="View\Board.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="View\Board.Designer.cs">
+      <DependentUpon>Board.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controller\ViewsController.cs" />
+    <Compile Include="View\LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +84,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Board.resx">
+      <DependentUpon>Board.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +102,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\Exceptions\" />
+    <Folder Include="Persistence\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -24,7 +24,7 @@ namespace LudoClient.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Connection.CreateConnection(this,'wilmer', '1234');
+            Connection.CreateConnection(this,"wilmer", "1234");
         }
 
         private void LogIn_Load(object sender, EventArgs e)

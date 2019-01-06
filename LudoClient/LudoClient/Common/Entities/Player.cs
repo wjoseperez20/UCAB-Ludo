@@ -98,7 +98,7 @@ namespace LudoClient.Common.Entities
         {
             try
             {
-                string[] package = IMessageOutput.GetMensaje();
+                string[] package = IMessageOutput.GetMessage();
 
                 if (_client == null)
                     return;

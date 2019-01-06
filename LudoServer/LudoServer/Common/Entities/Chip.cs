@@ -9,7 +9,7 @@ namespace LudoServer.Common.Entities
     public class Chip
     {
         private int _id;
-        private bool _assigned;
+        private bool _assigned; 
 
         public Chip(int id)
         {
