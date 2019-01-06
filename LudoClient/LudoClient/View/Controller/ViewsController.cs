@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LudoClient.View.Controller
 {
-    class ViewsController
+    public class ViewsController
     {
     }
 }

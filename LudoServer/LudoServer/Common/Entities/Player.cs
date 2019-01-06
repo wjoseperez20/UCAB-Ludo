@@ -16,8 +16,8 @@ namespace LudoServer.Common.Entities
         private string _lastname;
         private int _position;
         private bool _turn_active;
-        private TcpClient _client;
         private int _turn;
+        private TcpClient _client;
         private Chip _chip;
 
         public Player()
