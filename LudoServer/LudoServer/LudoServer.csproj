@@ -54,6 +54,8 @@
     <Compile Include="Common\Entities\Dice.cs" />
     <Compile Include="Common\Entities\Game.cs" />
     <Compile Include="Common\Entities\Player.cs" />
+    <Compile Include="Logic\Message\Core\Interfaces\IMessageInput.cs" />
+    <Compile Include="Logic\Message\Core\Interfaces\IMessageOutput.cs" />
     <Compile Include="Logic\Message\Core\PackageClient.cs" />
     <Compile Include="Logic\Message\Core\MessageManager.cs" />
     <Compile Include="Persistence\UserJson.cs" />

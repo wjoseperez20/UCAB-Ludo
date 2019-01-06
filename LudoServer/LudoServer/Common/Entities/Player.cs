@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Sockets;
+using LudoServer.Logic.Message.Core.Interfaces;
+using System.Windows.Forms;
 
 namespace LudoServer.Common.Entities
 {
@@ -19,6 +21,8 @@ namespace LudoServer.Common.Entities
         private int _turn;
         private TcpClient _client;
         private Chip _chip;
+        public byte[] Reading;
+        public byte[] Writing;
 
         public Player()
         {
@@ -86,6 +90,29 @@ namespace LudoServer.Common.Entities
         {
             get { return _chip; }
             set { _chip = value; }
+        }
+
+        public void SendMessage(IMessageOutput IMessageOutput)
+        {
+            try
+            {
+                lock (_client)
+                {
+                    string[] package = IMessageOutput.GetMensaje();
+
+                    if (!_client.Connected)
+                        return;
+
+                    string message = string.Join(";", package);
+
+                    Writing = Encoding.ASCII.GetBytes(message);
+                    _client.GetStream().Write(Writing, 0, Writing.Length);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error al enviar mensaje TCP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
