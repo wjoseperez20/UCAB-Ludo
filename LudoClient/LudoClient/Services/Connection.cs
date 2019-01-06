@@ -94,7 +94,7 @@ namespace LudoClient.Services
                 messageReceived = Encoding.ASCII.GetString(_player.Reading, 0, BytesReceived);
 
                 _packageServer = new PackageServer(messageReceived.Split(';'));
-                _messageManager.ExecuteMessage(_packageServer, _player, _game, _viewsController);
+                _messageManager.RunMessage(_packageServer, _player, _game, _viewsController);
 
                 _player.Reading = new byte[512];
                 _player.Client.GetStream().BeginRead(_player.Reading, 0, _player.Reading.Length, ServerRead, _player.Client);

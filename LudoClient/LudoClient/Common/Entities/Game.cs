@@ -52,5 +52,13 @@ namespace LudoClient.Common.Entities
         {
             return Players.Find(x => x.Turn_Active);
         }
+
+        public void AssignPlayerChip(Player player, int idChip)
+        {
+            if (player.Chip != null)
+                return;
+
+            player.Chip = Chips.Find(x => x.Id == idChip);
+        }
     }
 }
