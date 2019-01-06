@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LudoServer.Logic.Message.Client
+namespace LudoServer.Logic.Message.Core
 {
     public class PackageClient
     {

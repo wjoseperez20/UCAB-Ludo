@@ -13,9 +13,9 @@ namespace LudoServer.Common.Entities
         public List<Player> PlayersConnected;
         public List<Chip> Chips;
         public bool Connected;
+        public bool StartedGame;
         private int _countGamers;
         private UserJson _json;
-        public bool Iniciado;
         private Random functionRandom;
         private static Game _game = null;
 
@@ -51,7 +51,7 @@ namespace LudoServer.Common.Entities
 
             _json = new UserJson(this);
 
-            Iniciado = false;
+            StartedGame = false;
 
             functionRandom = new Random();
         }

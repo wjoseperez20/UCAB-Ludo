@@ -54,10 +54,11 @@
     <Compile Include="Common\Entities\Dice.cs" />
     <Compile Include="Common\Entities\Game.cs" />
     <Compile Include="Common\Entities\Player.cs" />
-    <Compile Include="Logic\Message\Client\PackageClient.cs" />
+    <Compile Include="Logic\Message\Core\PackageClient.cs" />
     <Compile Include="Logic\Message\Core\MessageManager.cs" />
     <Compile Include="Persistence\UserJson.cs" />
     <Compile Include="Services\Connection.cs" />
+    <Compile Include="View\Controller\SeverViewController.cs" />
     <Compile Include="View\ServerView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,8 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\Exceptions\" />
-    <Folder Include="Logic\Message\Constants\" />
-    <Folder Include="Logic\Message\Server\" />
+    <Folder Include="Logic\Message\Core\Constants\" />
+    <Folder Include="Logic\Message\Input\" />
+    <Folder Include="Logic\Message\Output\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,7 +10,6 @@ using System.Configuration;
 using LudoServer.View;
 using LudoServer.Common.Entities;
 using LudoServer.Logic.Message.Core;
-using LudoServer.Logic.Message.Client;
 
 namespace LudoServer.Services
 {
