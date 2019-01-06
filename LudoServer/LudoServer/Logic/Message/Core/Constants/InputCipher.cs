@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LudoServer.Logic.Message.Core.Interfaces
+namespace LudoServer.Logic.Message.Core.Constants
 {
-    public interface IMessageOutput
+    public static class InputCipher
     {
-        string[] GetMessage();
     }
 }

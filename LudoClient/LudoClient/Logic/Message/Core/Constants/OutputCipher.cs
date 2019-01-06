@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LudoServer.Logic.Message.Core.Interfaces
+namespace LudoClient.Logic.Message.Core.Constants
 {
-    public interface IMessageOutput
+   class OutputCipher
     {
-        string[] GetMessage();
+        public const int Output_Create_Player = 1;
     }
 }

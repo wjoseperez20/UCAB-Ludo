@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Sockets;
+using LudoClient.Logic.Message.Core.Interfaces;
+using System.Windows.Forms;
 
 namespace LudoClient.Common.Entities
 {
@@ -19,8 +21,8 @@ namespace LudoClient.Common.Entities
         private int _turn;
         private TcpClient _client;
         private Chip _chip;
-        public byte[] reading;
-        public byte[] writing;
+        public byte[] Reading;
+        public byte[] Writing;
 
         public Player(string name, string password)
         {
@@ -29,7 +31,7 @@ namespace LudoClient.Common.Entities
             _turn_active = false;
             _turn = 0;
             _chip = null;
-            reading = new byte[512];
+            Reading = new byte[512];
         }
 
         public int Id
@@ -90,6 +92,29 @@ namespace LudoClient.Common.Entities
         {
             get { return _chip; }
             set { _chip = value; }
+        }
+
+        public void SendMessage(IMessageOutput IMessageOutput)
+        {
+            try
+            {
+                string[] package = IMessageOutput.GetMensaje();
+
+                if (_client == null)
+                    return;
+
+                if (!_client.Connected)
+                    return;
+
+                string message = string.Join(";", package);
+
+                Writing = Encoding.ASCII.GetBytes(message);
+                _client.GetStream().Write(Writing, 0, Writing.Length);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.GetType().FullName, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

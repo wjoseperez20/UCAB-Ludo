@@ -8,6 +8,6 @@ namespace LudoClient.Logic.Message.Core.Interfaces
 {
     public interface IMessageOutput
     {
-        string[] GetMensaje();
+        string[] GetMessage();
     }
 }
