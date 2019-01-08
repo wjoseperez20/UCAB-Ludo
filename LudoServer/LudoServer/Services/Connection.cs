@@ -18,12 +18,12 @@ namespace LudoServer.Services
         private IPAddress _ip_address;
         private int _port;
         private TcpListener _server;
-        private ServerView _form;
+        private ServerView _serverView;
         private Game _game;
         private MessageManager _messageManager;
         private PackageClient _packageClient;
 
-        public bool Create_Connection(ServerView form, int countGamers, Game game)
+        public bool Create_Connection(ServerView serverView, int countGamers, Game game)
         {
             try
             {
@@ -34,7 +34,7 @@ namespace LudoServer.Services
 
                 _port = Convert.ToInt32(port_server);
 
-                _form = form;
+                _serverView = serverView;
 
                 _messageManager = new MessageManager();
 
@@ -74,9 +74,15 @@ namespace LudoServer.Services
                 _player = new Player();
                 _player.Client = Client_Incoming;
 
-                MessageBox.Show("MI primera conexion", "¡Atencion!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lock (_game.PlayersConnected)
+                {
+                    _game.PlayersConnected.Add(_player);
+                }
 
+                _player.Reading = new byte[512];
 
+                _player.Client.Client.BeginReceive(_player.Reading, 0, _player.Reading.Length, 0, new AsyncCallback(ReceivingClientMessage), _player.Client);
+ 
             }
             catch (ObjectDisposedException)
             {
@@ -88,5 +94,46 @@ namespace LudoServer.Services
             }
         }
 
+        private void ReceivingClientMessage(IAsyncResult AsyncResult)
+        {
+            int nCountReadBytes = 0;
+            string messageReceived;
+            Player _player = null;
+
+            lock (_game.PlayersConnected)
+            {
+                try
+                {
+                    _player = _game.PlayersConnected.Find(x => x.Client == (TcpClient)AsyncResult.AsyncState);
+
+                    if (_player == null)
+                        return;
+
+                    nCountReadBytes = _player.Client.GetStream().EndRead(AsyncResult);
+
+                    messageReceived = Encoding.ASCII.GetString(_player.Reading, 0, nCountReadBytes).Trim();
+
+                    _packageClient = new PackageClient(messageReceived.Split(';'));
+
+                    _messageManager.RunMessage(_packageClient, _player, _game, _serverView);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString(), "Error General", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    if (_player != null)
+                    {
+                        if (_player.Client.Connected)
+                        {
+                            _player.Reading = new byte[512];
+                            _player.Client.Client.BeginReceive(_player.Reading, 0, _player.Reading.Length, 0, new AsyncCallback(ReceivingClientMessage), _player.Client);
+                        }
+                    }
+                }
+            }
+        }
     }
 }

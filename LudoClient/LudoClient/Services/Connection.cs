@@ -23,7 +23,7 @@ namespace LudoClient.Services
         private MessageManager _messageManager;
         private PackageServer _packageServer;
 
-        public bool CreateConnection(LogIn logIn,string name, string password)
+        public bool CreateConnection(Login logIn,string name, string password)
         {
             try
             {

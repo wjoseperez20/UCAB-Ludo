@@ -63,5 +63,14 @@ namespace LudoServer.Common.Entities
                 Chips.Add(new Chip(i));
             }
         }
+
+        public void AssignChipPlayer(Player player)
+        {
+            if (player.Chip != null)
+                return;
+
+            player.Chip = _game.Chips.Find(f => !f.Assigned);
+            player.Chip.Assigned = true;
+        }
     }
 }

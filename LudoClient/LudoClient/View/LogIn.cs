@@ -13,11 +13,11 @@ using LudoClient.Common.Entities;
 
 namespace LudoClient.View
 {
-    public partial class LogIn : Form
+    public partial class Login : Form
     {
         Connection Connection = new Connection();
 
-        public LogIn()
+        public Login()
         {
             InitializeComponent();
         }
@@ -27,7 +27,7 @@ namespace LudoClient.View
             Connection.CreateConnection(this,"wilmer", "1234");
         }
 
-        private void LogIn_Load(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
 
         }

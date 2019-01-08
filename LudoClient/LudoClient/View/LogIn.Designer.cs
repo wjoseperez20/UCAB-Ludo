@@ -1,6 +1,6 @@
 ﻿namespace LudoClient.View
 {
-    partial class LogIn
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -49,7 +49,7 @@
             this.Controls.Add(this.button1);
             this.Name = "LogIn";
             this.Text = "LogIn";
-            this.Load += new System.EventHandler(this.LogIn_Load);
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
 
         }

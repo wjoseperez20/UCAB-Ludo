@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LudoServer.Logic.Message.Core.Constants
+namespace LudoServer.Logic.Message.Output
 {
-    class OutputCipher
+    class Output_Login
     {
         public const int Output_Create_Player = 1;
-        public const int Output_Failed_Login = 2;
     }
 }

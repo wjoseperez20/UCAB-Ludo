@@ -8,19 +8,19 @@ namespace LudoClient.View.Controller
 {
     public class ViewsController
     {
-        private LogIn _logIn;
+        private Login _login;
         private Board _board;
 
-        public ViewsController(LogIn LogIn, Board Board)
+        public ViewsController(Login Login, Board Board)
         {
-            _logIn = LogIn;
+            _login = Login;
             _board = Board;
         }
 
-        public LogIn LogInGame
+        public Login LoginGame
         {
-            get { return _logIn; }
-            set { _logIn = value; }
+            get { return _login; }
+            set { _login = value; }
         }
 
         public Board BoardGame
