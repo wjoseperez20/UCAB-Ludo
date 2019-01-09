@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using LudoServer.Common.Entities;
 using LudoServer.Logic.Message.Core;
 using LudoServer.Logic.Message.Core.Interfaces;
@@ -18,10 +19,12 @@ namespace LudoServer.Logic.Message.Input
             player.User = message.PopString();
             player.Password = message.PopString();
 
+            MessageBox.Show(string.Format("Name {0}, PassWord {1}!!!", player.User, player.Password), "¡Atencion!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
             Player _newJugador = null;
 
             _newJugador = game.PlayersRegistered.Find(j => j.User.ToLower() == player.User.ToLower() && j.Password == player.Password);
-
 
             if (_newJugador == null)
             {
@@ -36,8 +39,6 @@ namespace LudoServer.Logic.Message.Input
             game.AssignChipPlayer(player);
 
             player.SendMessage(new Output_CreatePlayer(player, game));
-
-           
 
         }
     }

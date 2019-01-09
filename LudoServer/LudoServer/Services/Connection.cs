@@ -10,6 +10,7 @@ using System.Configuration;
 using LudoServer.View;
 using LudoServer.Common.Entities;
 using LudoServer.Logic.Message.Core;
+using LudoServer.Logic.Message.Output;
 
 namespace LudoServer.Services
 {
@@ -23,7 +24,7 @@ namespace LudoServer.Services
         private MessageManager _messageManager;
         private PackageClient _packageClient;
 
-        public bool Create_Connection(ServerView serverView, int countGamers, Game game)
+        public bool Create_Connection(ServerView serverView, int countPlayers, Game game)
         {
             try
             {
@@ -43,6 +44,8 @@ namespace LudoServer.Services
                 _server.Start();
 
                 _game = game;
+
+                _game.CountPlayer = countPlayers;
 
                 _server.BeginAcceptTcpClient(AcceptingClient, _server);
 
@@ -73,6 +76,18 @@ namespace LudoServer.Services
 
                 _player = new Player();
                 _player.Client = Client_Incoming;
+
+                if ((_game.PlayersConnected.Count + 1) > _game.CountPlayer)
+                {
+                    _player.SendMessage(new Output_RejectPlayer(_game, "Lo sentimos, la partida esta llena. (Numero maximo de jugadores: " + _game.PlayersConnected + ")"));
+                    return;
+                }
+
+                if (_game.StartedGame)
+                {
+                    _player.SendMessage(new Output_RejectPlayer(_game, "Lo sentimos el juego ya ha iniciado."));
+                    return;
+                }
 
                 lock (_game.PlayersConnected)
                 {
@@ -134,6 +149,18 @@ namespace LudoServer.Services
                     }
                 }
             }
+        }
+
+        public void CerrarConexion()
+        {
+            foreach (Player _player in _game.PlayersConnected)
+            {
+                _player.SendMessage(new Output_ConnectionClose());
+            }
+            _server.Stop();
+            _server = null;
+            _game.RestartGame();
+
         }
     }
 }

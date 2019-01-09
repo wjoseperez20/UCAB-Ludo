@@ -62,9 +62,10 @@
     <Compile Include="Logic\Message\Core\PackageClient.cs" />
     <Compile Include="Logic\Message\Core\MessageManager.cs" />
     <Compile Include="Logic\Message\Input\Input_Login.cs" />
+    <Compile Include="Logic\Message\Output\Output_ConnectionClose.cs" />
     <Compile Include="Logic\Message\Output\Output_CreatePlayer.cs" />
     <Compile Include="Logic\Message\Output\Output_FailedLogin.cs" />
-    <Compile Include="Logic\Message\Output\Output_Login.cs" />
+    <Compile Include="Logic\Message\Output\Output_RejectPlayer.cs" />
     <Compile Include="Persistence\UserJson.cs" />
     <Compile Include="Services\Connection.cs" />
     <Compile Include="View\Controller\SeverViewController.cs" />

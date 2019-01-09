@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LudoServer.Logic.Message.Core.Interfaces;
 using LudoServer.Persistence;
 
 namespace LudoServer.Common.Entities
@@ -14,11 +15,11 @@ namespace LudoServer.Common.Entities
         public List<Chip> Chips;
         public bool Connected;
         public bool StartedGame;
-        private int _countGamers;
+        private int _countPlayer;
         private UserJson _json;
         private Random functionRandom;
         private static Game _game = null;
-
+            
         private Game()
         {
             InitValues();
@@ -56,6 +57,12 @@ namespace LudoServer.Common.Entities
             functionRandom = new Random();
         }
 
+        public int CountPlayer
+        {
+            get { return _countPlayer; }
+            set { _countPlayer = value; }
+        }
+
         private void CreateChips()
         {
             for (int i = 1; i <= 4; i++)
@@ -72,5 +79,39 @@ namespace LudoServer.Common.Entities
             player.Chip = _game.Chips.Find(f => !f.Assigned);
             player.Chip.Assigned = true;
         }
+
+        public void RestartGame()
+        {
+            InitValues();
+        }
+
+        public void SendBroadCastMessage(IMessageOutput mensaje)
+        {
+            foreach (Player x in PlayersConnected)
+            {
+                x.SendMessage(mensaje);
+            }
+        }
+
+        public Player GetPlayerById(int id)
+        {
+            return PlayersConnected.Find(x => x.Id == id);
+        }
+
+        public Player GetPlayerByTurn(int turn)
+        {
+            return PlayersConnected.Find(x => x.Turn == turn);
+        }
+
+        public Player GetActiveTurnPlayer()
+        {
+            return PlayersConnected.Find(x => x.Turn_Active);
+        }
+
+        public bool RegisterPlayer(Player player)
+        {
+            return _json.RegisterPlayer(player);
+        }
+
     }
 }

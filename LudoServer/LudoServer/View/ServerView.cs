@@ -23,7 +23,7 @@ namespace LudoServer.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Connection.Create_Connection(this, 1, Game.GetGame);
+            Connection.Create_Connection(this, 4, Game.GetGame);
         }
 
         private void ServerView_Load(object sender, EventArgs e)
