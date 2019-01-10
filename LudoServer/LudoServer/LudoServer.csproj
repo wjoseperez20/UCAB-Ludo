@@ -115,6 +115,12 @@
     <None Include="Resources\taskBarIcon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\multiple-users-silhouette.png" />
+    <None Include="Resources\power-off.png" />
+    <None Include="Resources\power-button.png" />
+    <None Include="Resources\sello de calidad ucabista.jpg" />
+    <None Include="Resources\emoticon-face-with-the-mouth-at-one-side-like-a-small-smile-in-a-rounded-square.png" />
+    <None Include="Resources\emoticon-square-smiling-face-with-closed-eyes.png" />
     <None Include="Resources\favicon.ico" />
     <Content Include="taskBarIcon.ico" />
   </ItemGroup>

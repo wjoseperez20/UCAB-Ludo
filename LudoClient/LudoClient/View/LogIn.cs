@@ -24,10 +24,42 @@ namespace LudoClient.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Connection.CreateConnection(this,"wilmer", "1234");
+            try
+            {
+                if (string.IsNullOrEmpty(userNameText.Text) || string.IsNullOrEmpty(passwordText.Text))
+                {
+                    MessageBox.Show("El campo Usuario y Contraseña ¡No pueden ser vacios!", "¡Atencion!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                   
+                if (!Connection.CreateConnection(this, userNameText.Text, passwordText.Text))
+                    MessageBox.Show("Ha ocurrido un error en la conexión");
+                else
+                    bLoginUser.Enabled = false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error general");
+            }
         }
 
         private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

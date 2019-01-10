@@ -37,5 +37,10 @@ namespace LudoClient.View
                 return _board;
             }
         }
+
+        private void titleLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
