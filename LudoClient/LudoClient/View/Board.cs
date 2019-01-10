@@ -14,7 +14,7 @@ namespace LudoClient.View
     public partial class Board : Form
     {
         Game _game;
-        Player jugadorPrincipal;
+        Player principalPlayer;
         private static Board _board = null;
 
         public Board()
