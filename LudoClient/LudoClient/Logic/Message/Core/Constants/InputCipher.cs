@@ -12,5 +12,7 @@ namespace LudoClient.Logic.Message.Core.Constants
         public const int Input_Failed_Login = 2;
         public const int Input_Close_Connection = 3;
         public const int Input_Reject_Player = 4;
+        public const int Input_Delete_Player = 5;
+        public const int Input_Start_Game = 6;
     }
 }

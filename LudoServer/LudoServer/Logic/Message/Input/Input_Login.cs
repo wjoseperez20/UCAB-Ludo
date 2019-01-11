@@ -19,9 +19,6 @@ namespace LudoServer.Logic.Message.Input
             player.User = message.PopString();
             player.Password = message.PopString();
 
-            MessageBox.Show(string.Format("Name {0}, PassWord {1}!!!", player.User, player.Password), "¡Atencion!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
             Player _newJugador = null;
 
             _newJugador = game.PlayersRegistered.Find(j => j.User.ToLower() == player.User.ToLower() && j.Password == player.Password);
@@ -39,6 +36,8 @@ namespace LudoServer.Logic.Message.Input
             game.AssignChipPlayer(player);
 
             serverView.ShowPlayerEntryConnected(player, false);
+
+            serverView.ShowMonitorMessageLog(DateTime.Now + " - " + player.Id.ToString() + ": Se le ha asignado el nombre: " + player.User.ToUpper());
 
             player.SendMessage(new Output_CreatePlayer(player, game));
 

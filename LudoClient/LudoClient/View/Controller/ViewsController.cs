@@ -33,5 +33,17 @@ namespace LudoClient.View.Controller
         {
             _login.EnableLoginButton();
         }
+
+        public void StartGame()
+        {
+        
+        }
+
+        public void CloseWindows()
+        {
+            _login.CloseWindow();
+            _board.CloseWindow();
+        }
+
     }
 }

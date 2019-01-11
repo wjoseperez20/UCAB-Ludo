@@ -26,7 +26,7 @@ namespace LudoServer.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!Connection.Create_Connection(this, 3, Game.GetGame))
+            if (!Connection.Create_Connection(this, 1, Game.GetGame))
                 MessageBox.Show("Ingresa una dirección IP valida");
             else
             {
@@ -49,7 +49,13 @@ namespace LudoServer.View
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            if (!Game.GetGame.StartGame())
+                MessageBox.Show("Faltan jugadores para iniciar la partida. (" + Game.GetGame.PlayersConnected.Count + "/" + Game.GetGame.CountPlayer + ")");
+            else
+            {
+                MessageBox.Show("Partida Iniciada.");
+                startGameButton.Enabled = false;
+            }
         }
 
         private void bRegistarJugador_Click(object sender, EventArgs e)
@@ -82,6 +88,17 @@ namespace LudoServer.View
             }
         }
 
+        public void ClearServer()
+        {
+            monitorLogs.Clear();
+            startGameButton.Enabled = false;
+            powerOnButton.Enabled = true;
+            powerOffButton.Enabled = false;
+            registerPlayerButton.Enabled = true;
+            listConnectedPlayers.Items.Clear();
+
+        }
+
         private void powerOffButton_Click(object sender, EventArgs e)
         {
             ClearServer();
@@ -93,17 +110,19 @@ namespace LudoServer.View
             listConnectedPlayers.Invoke(new Action<Player, bool>(MonitorListConnetedPlayers), player, remove);
         }
 
-        public void ClearServer()
+        public void ShowMonitorMessageLog(string _message)
         {
-            monitorLogs.Clear();
-            startGameButton.Enabled = false;
-            powerOnButton.Enabled = true;
-            powerOffButton.Enabled= false;
-            registerPlayerButton.Enabled = true;
-            listConnectedPlayers.Items.Clear();
-
+            monitorLogs.Invoke(new Action<string>(MonitorListLogs), _message);
         }
 
+        public void MonitorListLogs(string _message)
+        {
+            if (!String.IsNullOrEmpty(monitorLogs.Text))
+                monitorLogs.Text = monitorLogs.Text + Environment.NewLine + _message;
+            else
+                monitorLogs.Text = _message;
+
+        }
         public void MonitorListRegisteredPlayers()
         {
             listRecordPlayers.Items.Clear();

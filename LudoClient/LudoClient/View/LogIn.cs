@@ -72,5 +72,14 @@ namespace LudoClient.View
         {
             bLoginUser.Enabled = true;
         }
+
+        public void CloseWindow()
+        {
+            this.Invoke(new Action(InvokeCloseWindow));
+        }
+        private void InvokeCloseWindow()
+        {
+            this.Close();
+        }
     }
 }

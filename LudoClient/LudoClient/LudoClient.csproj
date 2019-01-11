@@ -62,7 +62,9 @@
     <Compile Include="Logic\Message\Core\MessageManager.cs" />
     <Compile Include="Logic\Message\Core\PackageServer.cs" />
     <Compile Include="Logic\Message\Input\Input_ConnectionClose.cs" />
+    <Compile Include="Logic\Message\Input\Input_StartGame.cs" />
     <Compile Include="Logic\Message\Input\Input_CreatePlayer.cs" />
+    <Compile Include="Logic\Message\Input\Input_DeletePlayer.cs" />
     <Compile Include="Logic\Message\Input\Input_FailedLogin.cs" />
     <Compile Include="Logic\Message\Input\Input_RejectPlayer.cs" />
     <Compile Include="Logic\Message\Output\Output_CreatePlayer.cs" />

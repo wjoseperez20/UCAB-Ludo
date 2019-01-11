@@ -28,6 +28,7 @@ namespace LudoClient.Logic.Message.Core
             _messagesInput.Add(InputCipher.Input_Failed_Login, new Input_FailedLogin());
             _messagesInput.Add(InputCipher.Input_Close_Connection, new Input_ConnectionClose());
             _messagesInput.Add(InputCipher.Input_Reject_Player, new Input_RejectPlayer());
+            _messagesInput.Add(InputCipher.Input_Delete_Player, new Input_DeletePlayer());
         }
 
         public void RunMessage(PackageServer message, Player player, Game game, ViewsController viewsController)

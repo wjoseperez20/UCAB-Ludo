@@ -56,6 +56,7 @@ namespace LudoServer.Logic.Message.Core
 
                 if (!_messagesInput.TryGetValue(Entrycode, out IMessageInput))
                 {
+                    serverView.ShowMonitorMessageLog("Codigo de entrada desconocido: " + Entrycode);
                     return null;
                 }
 
@@ -64,6 +65,7 @@ namespace LudoServer.Logic.Message.Core
             }
             catch (Exception)
             {
+                serverView.ShowMonitorMessageLog("Error al convertir el código de entrada: " + Split.GetITem(0));
                 return null;
             }
 

@@ -92,6 +92,32 @@ namespace LudoServer.Common.Entities
             set { _chip = value; }
         }
 
+        public void Play()
+        {
+            if (!this._turn_active)
+                return;
+
+            int result_dice = Dice.throwDice();
+
+            CalculatePosition(result_dice);
+            
+        }
+
+        private void CalculatePosition(int result_dice)
+        {
+            int positionBoard = this._position + result_dice;
+
+            if (positionBoard > 53)
+            {
+                this._position = positionBoard - 54;
+                //house
+            }
+            else
+            {
+                this._position = positionBoard;
+            }
+        }
+
         public void SendMessage(IMessageOutput IMessageOutput)
         {
             try

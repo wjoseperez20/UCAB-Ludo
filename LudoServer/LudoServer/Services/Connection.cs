@@ -43,11 +43,15 @@ namespace LudoServer.Services
 
                 _server.Start();
 
+                _serverView.ShowMonitorMessageLog("Conexión abierta.");
+
                 _game = game;
 
                 _game.CountPlayer = countPlayers;
 
                 _server.BeginAcceptTcpClient(AcceptingClient, _server);
+
+                _serverView.ShowMonitorMessageLog("Esperando jugadores...");
 
                 return true;
             }
@@ -89,6 +93,8 @@ namespace LudoServer.Services
                     return;
                 }
 
+                _serverView.ShowMonitorMessageLog("Recibiendo información de un jugador...");
+
                 lock (_game.PlayersConnected)
                 {
                     _game.PlayersConnected.Add(_player);
@@ -112,7 +118,7 @@ namespace LudoServer.Services
         private void ReceivingClientMessage(IAsyncResult AsyncResult)
         {
             int nCountReadBytes = 0;
-            string messageReceived;
+            string messageReceived = "";
             Player _player = null;
 
             lock (_game.PlayersConnected)
@@ -133,6 +139,15 @@ namespace LudoServer.Services
                     _messageManager.RunMessage(_packageClient, _player, _game, _serverView);
 
                 }
+                catch (IndexOutOfRangeException)
+                {
+                    _serverView.ShowMonitorMessageLog("Error al decodificar el mensaje: " + messageReceived);
+                }
+                catch (System.IO.IOException)
+                {
+                    _serverView.ShowMonitorMessageLog("ATENCION: El jugador: " + _player.User + " se ha desconectado.");
+                    RemovePlayer(_player);
+                }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.ToString(), "Error General", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -148,6 +163,36 @@ namespace LudoServer.Services
                         }
                     }
                 }
+            }
+        }
+
+        private void RemovePlayer(Player player)
+        {
+          
+            bool reassign = false;
+
+            player.Chip.Assigned = false;
+
+            if (player.Turn_Active)
+            {
+                _game.ManageTurn();
+                reassign = true;
+            }
+
+            _game.PlayersConnected.Remove(player);
+   
+            _game.RecalculateTurnOrder();
+
+            SendDesconnectedPlayer(player, reassign);
+
+            _serverView.ShowPlayerEntryConnected(player, true);
+        }
+
+        private void SendDesconnectedPlayer(Player player, bool reassign)
+        {
+            foreach (Player j in _game.PlayersConnected)
+            {
+                j.SendMessage(new Output_DeletePlayer(player, reassign));
             }
         }
 

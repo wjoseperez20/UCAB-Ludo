@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LudoServer.Logic.Message.Core.Interfaces;
+using LudoServer.Logic.Message.Output;
 using LudoServer.Persistence;
 
 namespace LudoServer.Common.Entities
@@ -57,6 +58,22 @@ namespace LudoServer.Common.Entities
             functionRandom = new Random();
         }
 
+        public bool StartGame()
+        {
+            if (PlayersConnected.Count < _countPlayer)
+                return false;
+
+
+            StartedGame = true;
+
+            CalculateTurnOrder();
+
+            AssignTurnPlayer();
+
+            return true;
+
+        }
+
         public int CountPlayer
         {
             get { return _countPlayer; }
@@ -71,6 +88,13 @@ namespace LudoServer.Common.Entities
             }
         }
 
+        public void ManagePlayPlayer(Player player)
+        {
+            player.Play();
+            //Casillas hablar con felix
+        }
+
+
         public void AssignChipPlayer(Player player)
         {
             if (player.Chip != null)
@@ -78,6 +102,79 @@ namespace LudoServer.Common.Entities
 
             player.Chip = _game.Chips.Find(f => !f.Assigned);
             player.Chip.Assigned = true;
+        }
+
+        public void AssignTurnPlayer()
+        {
+            foreach (Player player in PlayersConnected)
+            {
+                player.SendMessage(new Output_StartGame(this));
+            }
+        }
+
+        private void CalculateTurnOrder()
+        {
+            List<int> TurnOrder = new List<int>();
+
+            for (int i = 1; i <= PlayersConnected.Count; i++)
+            {
+                TurnOrder.Add(i);
+            }
+
+            int index = 0;
+
+            foreach (Player player in PlayersConnected)
+            {
+                index = functionRandom.Next(0, TurnOrder.Count);
+                player.Turn = TurnOrder.ElementAt(index);
+                TurnOrder.RemoveAt(index);
+
+                if (player.Turn == 1)
+                    player.Turn_Active = true;
+            }
+        }
+
+        public void RecalculateTurnOrder()
+        {
+            List<int> TurnOrder = new List<int>();
+
+            for (int i = 1; i <= PlayersConnected.Count; i++)
+            {
+                TurnOrder.Add(i);
+            }
+
+            int index = 0;
+
+            foreach (Player player in PlayersConnected.OrderBy(x => x.Turn))
+            {
+                player.Turn = TurnOrder.ElementAt(index);
+                TurnOrder.RemoveAt(index);
+            }
+        }
+
+        public void ManageTurn()
+        {
+            Player PlayerTurnActive = GetActiveTurnPlayer();
+
+            if (PlayerTurnActive == null)
+                return;
+
+            int turnActual = PlayerTurnActive.Turn;
+
+            PlayerTurnActive.Turn_Active = false;
+
+            if (turnActual < PlayersConnected.Count)
+                turnActual = turnActual + 1;
+            else
+                turnActual = 1;
+
+            Player NextIdPlayerTurn = GetPlayerByTurn(turnActual);
+
+            if (NextIdPlayerTurn == null)
+                return;
+
+            NextIdPlayerTurn.Turn_Active = true;
+
         }
 
         public void RestartGame()
