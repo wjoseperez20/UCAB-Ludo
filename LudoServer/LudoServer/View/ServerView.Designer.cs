@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServerView));
-            this.button1 = new System.Windows.Forms.Button();
+            this.powerOnButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bRegistarJugador = new System.Windows.Forms.Button();
+            this.registerPlayerButton = new System.Windows.Forms.Button();
             this.passwordText = new System.Windows.Forms.TextBox();
             this.userNameText = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -47,12 +47,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.listConnectedPlayers = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.startGameButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.comboCountPlayer = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.powerOffButton = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.monitorLogs = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -67,23 +67,23 @@
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // powerOnButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::LudoServer.Properties.Resources.power_button;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(295, 34);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 66);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Encender Server";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.powerOnButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.powerOnButton.Image = global::LudoServer.Properties.Resources.power_button;
+            this.powerOnButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.powerOnButton.Location = new System.Drawing.Point(295, 34);
+            this.powerOnButton.Name = "powerOnButton";
+            this.powerOnButton.Size = new System.Drawing.Size(250, 66);
+            this.powerOnButton.TabIndex = 0;
+            this.powerOnButton.Text = "Encender Server";
+            this.powerOnButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.powerOnButton.UseVisualStyleBackColor = true;
+            this.powerOnButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.bRegistarJugador);
+            this.panel2.Controls.Add(this.registerPlayerButton);
             this.panel2.Controls.Add(this.passwordText);
             this.panel2.Controls.Add(this.userNameText);
             this.panel2.Controls.Add(this.label11);
@@ -100,22 +100,24 @@
             this.panel2.TabIndex = 14;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // bRegistarJugador
+            // registerPlayerButton
             // 
-            this.bRegistarJugador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bRegistarJugador.Location = new System.Drawing.Point(289, 244);
-            this.bRegistarJugador.Margin = new System.Windows.Forms.Padding(4);
-            this.bRegistarJugador.Name = "bRegistarJugador";
-            this.bRegistarJugador.Size = new System.Drawing.Size(100, 39);
-            this.bRegistarJugador.TabIndex = 22;
-            this.bRegistarJugador.Text = "Registrar";
-            this.bRegistarJugador.UseVisualStyleBackColor = true;
+            this.registerPlayerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerPlayerButton.Location = new System.Drawing.Point(289, 244);
+            this.registerPlayerButton.Margin = new System.Windows.Forms.Padding(4);
+            this.registerPlayerButton.Name = "registerPlayerButton";
+            this.registerPlayerButton.Size = new System.Drawing.Size(100, 39);
+            this.registerPlayerButton.TabIndex = 22;
+            this.registerPlayerButton.Text = "Registrar";
+            this.registerPlayerButton.UseVisualStyleBackColor = true;
+            this.registerPlayerButton.Click += new System.EventHandler(this.bRegistarJugador_Click);
             // 
             // passwordText
             // 
             this.passwordText.Location = new System.Drawing.Point(137, 196);
             this.passwordText.Margin = new System.Windows.Forms.Padding(4);
             this.passwordText.Name = "passwordText";
+            this.passwordText.PasswordChar = '*';
             this.passwordText.Size = new System.Drawing.Size(252, 22);
             this.passwordText.TabIndex = 21;
             // 
@@ -260,19 +262,19 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Jugadores Conectados";
             // 
-            // button2
+            // startGameButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::LudoServer.Properties.Resources.multiple_users_silhouette;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(42, 155);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(230, 66);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Iniciar Partida   ";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.startGameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startGameButton.Image = global::LudoServer.Properties.Resources.multiple_users_silhouette;
+            this.startGameButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.startGameButton.Location = new System.Drawing.Point(42, 155);
+            this.startGameButton.Name = "startGameButton";
+            this.startGameButton.Size = new System.Drawing.Size(230, 66);
+            this.startGameButton.TabIndex = 17;
+            this.startGameButton.Text = "Iniciar Partida   ";
+            this.startGameButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.startGameButton.UseVisualStyleBackColor = true;
+            this.startGameButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // label7
             // 
@@ -307,30 +309,31 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.powerOffButton);
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.startGameButton);
             this.panel4.Controls.Add(this.comboCountPlayer);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.powerOnButton);
             this.panel4.Location = new System.Drawing.Point(845, 496);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(574, 242);
             this.panel4.TabIndex = 21;
             // 
-            // button3
+            // powerOffButton
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::LudoServer.Properties.Resources.power_off;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(295, 155);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(250, 66);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Apagar Server     ";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
+            this.powerOffButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.powerOffButton.Image = global::LudoServer.Properties.Resources.power_off;
+            this.powerOffButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.powerOffButton.Location = new System.Drawing.Point(295, 155);
+            this.powerOffButton.Name = "powerOffButton";
+            this.powerOffButton.Size = new System.Drawing.Size(250, 66);
+            this.powerOffButton.TabIndex = 21;
+            this.powerOffButton.Text = "Apagar Server     ";
+            this.powerOffButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.powerOffButton.UseVisualStyleBackColor = true;
+            this.powerOffButton.Click += new System.EventHandler(this.powerOffButton_Click);
             // 
             // panel5
             // 
@@ -430,9 +433,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button powerOnButton;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button bRegistarJugador;
+        private System.Windows.Forms.Button registerPlayerButton;
         private System.Windows.Forms.TextBox passwordText;
         private System.Windows.Forms.TextBox userNameText;
         private System.Windows.Forms.Label label11;
@@ -448,7 +451,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListBox listConnectedPlayers;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button startGameButton;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboCountPlayer;
@@ -459,7 +462,7 @@
         private System.Windows.Forms.Label eyesLabel;
         private System.Windows.Forms.Label titleServer;
         private System.Windows.Forms.Label selloUcabLabel;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button powerOffButton;
     }
 }
 

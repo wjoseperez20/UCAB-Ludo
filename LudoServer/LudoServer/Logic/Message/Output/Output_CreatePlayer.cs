@@ -14,10 +14,13 @@ namespace LudoServer.Logic.Message.Output
         public Output_CreatePlayer(Player player, Game game)
         {
             AddElement(OutputCipher.Output_Create_Player.ToString());
+
             AddElement(player.Id.ToString());
             AddElement(player.Position.ToString());
+            AddElement(false.ToString());
             AddElement(player.Chip.Id.ToString());
-
+   
+            AddElement(game.CountPlayer.ToString());
             AddElement((game.PlayersConnected.Count - 1).ToString());
 
             foreach (Player j in game.PlayersConnected.Where(u => u.Id != player.Id))
@@ -25,6 +28,8 @@ namespace LudoServer.Logic.Message.Output
                 AddElement(j.User);
                 AddElement(j.Id.ToString());
                 AddElement(j.Position.ToString());
+                AddElement(false.ToString());
+
                 AddElement(j.Chip.Id.ToString());
             }
         }

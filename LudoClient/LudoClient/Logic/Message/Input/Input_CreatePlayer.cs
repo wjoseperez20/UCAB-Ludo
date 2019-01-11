@@ -18,6 +18,28 @@ namespace LudoClient.Logic.Message.Input
             player.Id = message.PopInt();
             player.Position = message.PopInt();
             player.Turn_Active = message.PopBool();
+            game.AssignPlayerChip(player, message.PopInt());
+
+            game.CountPlayers = message.PopInt();
+            int _connectedPlayers = message.PopInt();
+
+            Player _assignPlayer;
+
+            for (int i = 0; i < _connectedPlayers; i++)
+            {
+                _assignPlayer = new Player(message.PopString());
+                _assignPlayer.Id = message.PopInt();
+                _assignPlayer.Position = message.PopInt();
+                _assignPlayer.Turn_Active = message.PopBool();
+
+                game.AssignPlayerChip(_assignPlayer, message.PopInt());
+                _assignPlayer.PrincipalPlayer = false;
+
+                game.Players.Add(_assignPlayer);
+
+            }
+
+            game.Players.Add(player);
 
             MessageBox.Show(string.Format("Id {0}, Position {1}!!!", player.Id, player.Position), "¡Atencion!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 

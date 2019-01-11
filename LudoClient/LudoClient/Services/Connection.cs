@@ -23,7 +23,7 @@ namespace LudoClient.Services
         private MessageManager _messageManager;
         private PackageServer _packageServer;
 
-        public bool CreateConnection(Login logIn,string name, string password)
+        public bool CreateConnection(Login login,string name, string password)
         {
             try
             {
@@ -34,10 +34,10 @@ namespace LudoClient.Services
                 _player.Client = new TcpClient();
 
                 _game = Game.GetGame;
-
+                    
                 Board _board = Board.GetBoard;
 
-                _viewsController = new ViewsController(logIn, _board);
+                _viewsController = new ViewsController(login, _board);
 
                 _messageManager = new MessageManager();
 
@@ -69,6 +69,7 @@ namespace LudoClient.Services
             }
             catch (Exception e)
             {
+                _viewsController.EnableLoginButton();
                 MessageBox.Show("Error al recibir respuesta del servidor.");
             }
 

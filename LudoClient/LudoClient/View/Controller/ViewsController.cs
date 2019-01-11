@@ -28,5 +28,10 @@ namespace LudoClient.View.Controller
             get { return _board; }
             set { _board = value; }
         }
+
+        public void EnableLoginButton()
+        {
+            _login.EnableLoginButton();
+        }
     }
 }

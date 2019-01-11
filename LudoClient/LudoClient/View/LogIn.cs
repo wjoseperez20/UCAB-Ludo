@@ -63,5 +63,14 @@ namespace LudoClient.View
         {
 
         }
+
+        public void EnableLoginButton()
+        {
+            bLoginUser.Invoke(new Action(InvokeEnableButton));
+        }
+        private void InvokeEnableButton()
+        {
+            bLoginUser.Enabled = true;
+        }
     }
 }

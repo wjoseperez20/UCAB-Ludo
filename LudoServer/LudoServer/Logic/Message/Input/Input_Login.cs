@@ -38,6 +38,8 @@ namespace LudoServer.Logic.Message.Input
             player.Lastname = _newJugador.Lastname;
             game.AssignChipPlayer(player);
 
+            serverView.ShowPlayerEntryConnected(player, false);
+
             player.SendMessage(new Output_CreatePlayer(player, game));
 
         }

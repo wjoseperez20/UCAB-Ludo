@@ -151,7 +151,7 @@ namespace LudoServer.Services
             }
         }
 
-        public void CerrarConexion()
+        public void CloseConnection()
         {
             foreach (Player _player in _game.PlayersConnected)
             {

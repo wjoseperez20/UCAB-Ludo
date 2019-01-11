@@ -19,6 +19,7 @@ namespace LudoClient.Common.Entities
         private int _position;
         private bool _turn_active;
         private int _turn;
+        private bool _principalPlayer;
         private TcpClient _client;
         private Chip _chip;
         public byte[] Reading;
@@ -31,6 +32,13 @@ namespace LudoClient.Common.Entities
             _turn_active = false;
             _turn = 0;
             _chip = null;
+            Reading = new byte[512];
+        }
+
+        public Player(string name)
+        {
+            _name = name;
+            _turn_active = false;
             Reading = new byte[512];
         }
 
@@ -92,6 +100,12 @@ namespace LudoClient.Common.Entities
         {
             get { return _chip; }
             set { _chip = value; }
+        }
+
+        public bool PrincipalPlayer
+        {
+            get { return _principalPlayer; }
+            set { _principalPlayer = value; }
         }
 
         public void SendMessage(IMessageOutput IMessageOutput)
