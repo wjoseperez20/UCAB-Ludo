@@ -73,6 +73,12 @@ namespace LudoClient.View
             bLoginUser.Enabled = true;
         }
 
+        public void ManageWindows(Board board)
+        {
+
+            this.Invoke(new Action<Board>(InvokeWindows), board);
+        }
+
         public void CloseWindow()
         {
             this.Invoke(new Action(InvokeCloseWindow));
@@ -81,5 +87,12 @@ namespace LudoClient.View
         {
             this.Close();
         }
+
+        private void InvokeWindows(Board board)
+        {
+            this.Visible = false;
+            board.Visible = true;
+        }
+
     }
 }

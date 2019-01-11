@@ -40,9 +40,6 @@ namespace LudoClient.Logic.Message.Input
             }
 
             game.Players.Add(player);
-
-            MessageBox.Show(string.Format("Id {0}, Position {1}!!!", player.Id, player.Position), "¡Atencion!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
         }
     }
 }

@@ -15,7 +15,7 @@ namespace LudoClient.Logic.Message.Input
     {
         public void Execute(PackageServer message, Player player, Game game, ViewsController viewsController) {
 
-            int countPlayers= message.PopInt();
+            int countPlayers = message.PopInt();
 
             Player _playerTurn = null;
             int idPlayer = 0, turnPlayer = 0;

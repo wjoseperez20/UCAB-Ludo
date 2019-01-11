@@ -36,7 +36,7 @@ namespace LudoClient.View.Controller
 
         public void StartGame()
         {
-        
+            _login.ManageWindows(_board);
         }
 
         public void CloseWindows()
