@@ -26,8 +26,6 @@ namespace LudoClient.Logic.Message.Input
 
             game.Players.Remove(_deletePlayer);
 
-            //lista de players
-
             if (game.StartedGame)
             {
                 if (game.Players.Count == 1)
@@ -45,11 +43,11 @@ namespace LudoClient.Logic.Message.Input
                         return;
 
                     _playerTurn.Turn_Active = true;
-                   // grafico.ActualizarTurno();
+                    viewsController.UpdateTurning();
                 }
 
                 //grafico.EliminarFichaJugador(_jugadorBorrado);
-                //grafico.ActualizarInfoJugadores();
+                viewsController.UpdateInfoPlayers();
 
             }
         }

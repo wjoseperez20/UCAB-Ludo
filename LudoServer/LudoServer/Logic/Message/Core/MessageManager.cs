@@ -25,6 +25,7 @@ namespace LudoServer.Logic.Message.Core
         private void RegisterMessages()
         {
             _messagesInput.Add(InputCipher.Input_Login, new Input_Login());
+            _messagesInput.Add(InputCipher.Input_Throw_Dice, new Input_ThrowDice());
         }
 
         public void RunMessage(PackageClient message, Player player, Game game, ServerView serverView)

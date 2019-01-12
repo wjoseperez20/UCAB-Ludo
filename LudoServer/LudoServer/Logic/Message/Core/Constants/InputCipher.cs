@@ -9,5 +9,6 @@ namespace LudoServer.Logic.Message.Core.Constants
     public static class InputCipher
     {
         public const int Input_Login = 1;
+        public const int Input_Throw_Dice = 2;
     }
 }

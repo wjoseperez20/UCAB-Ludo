@@ -9,5 +9,6 @@ namespace LudoClient.Logic.Message.Core.Constants
    class OutputCipher
     {
         public const int Output_Create_Player = 1;
+        public const int Output_Throw_Dice = 2;
     }
 }

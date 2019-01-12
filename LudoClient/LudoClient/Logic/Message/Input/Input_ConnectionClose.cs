@@ -17,6 +17,7 @@ namespace LudoClient.Logic.Message.Input
         public void Execute(PackageServer message, Player player, Game game, ViewsController viewsController)
         {
             MessageBox.Show(message.PopString());
+            viewsController.CloseWindows();
         }
     }
 }

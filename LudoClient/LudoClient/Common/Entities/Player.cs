@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Net.Sockets;
 using LudoClient.Logic.Message.Core.Interfaces;
 using System.Windows.Forms;
+using LudoClient.Logic.Message.Output;
 
 namespace LudoClient.Common.Entities
 {
@@ -106,6 +107,11 @@ namespace LudoClient.Common.Entities
         {
             get { return _principalPlayer; }
             set { _principalPlayer = value; }
+        }
+
+        public void ThrowDice()
+        {
+            SendMessage(new Output_ThrowDice(this));
         }
 
         public void SendMessage(IMessageOutput IMessageOutput)

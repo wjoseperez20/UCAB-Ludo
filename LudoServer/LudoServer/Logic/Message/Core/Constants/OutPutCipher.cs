@@ -14,5 +14,6 @@ namespace LudoServer.Logic.Message.Core.Constants
         public const int Output_Reject_Player = 4;
         public const int Output_Delete_Player = 5;
         public const int Output_Start_Game = 6;
+        public const int Output_Assing_Player = 7;
     }
 }
