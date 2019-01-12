@@ -65,7 +65,9 @@
     <Compile Include="Logic\Message\Core\Interfaces\IMessageOutput.cs" />
     <Compile Include="Logic\Message\Core\PackageClient.cs" />
     <Compile Include="Logic\Message\Core\MessageManager.cs" />
+    <Compile Include="Logic\Message\Input\Input_ThrowDice.cs" />
     <Compile Include="Logic\Message\Input\Input_Login.cs" />
+    <Compile Include="Logic\Message\Output\Output_AssingPlayer.cs" />
     <Compile Include="Logic\Message\Output\Output_DeletePlayer.cs" />
     <Compile Include="Logic\Message\Output\Output_ConnectionClose.cs" />
     <Compile Include="Logic\Message\Output\Output_CreatePlayer.cs" />
