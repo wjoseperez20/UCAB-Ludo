@@ -12,7 +12,7 @@ namespace LudoServer.Logic.Message.Output
     {
         public Output_AssingPlayer(Player player)
         {
-            AddElement(OutputCipher.Output_Close_Connection.ToString());
+            AddElement(OutputCipher.Output_Assing_Player.ToString());
             AddElement(player.Id.ToString()); 
             AddElement(player.User.ToString());
             AddElement(player.Position.ToString()); 

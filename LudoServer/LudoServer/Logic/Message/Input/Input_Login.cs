@@ -41,6 +41,10 @@ namespace LudoServer.Logic.Message.Input
 
             player.SendMessage(new Output_CreatePlayer(player, game));
 
+            foreach (Player j in game.PlayersConnected.Where(u => u.Id != player.Id))
+            {
+                j.SendMessage(new Output_AssingPlayer(player));
+            }
         }
     }
 }

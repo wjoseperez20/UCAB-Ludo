@@ -7,6 +7,7 @@ using LudoServer.Logic.Message.Core.Interfaces;
 using LudoServer.Logic.Message.Output;
 using LudoServer.Persistence;
 using LudoServer.Common.Entities.Squares;
+using System.Windows.Forms;
 
 namespace LudoServer.Common.Entities
 {

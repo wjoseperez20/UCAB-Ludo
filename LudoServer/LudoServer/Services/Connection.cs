@@ -143,7 +143,7 @@ namespace LudoServer.Services
                 {
                     _serverView.ShowMonitorMessageLog("Error al decodificar el mensaje: " + messageReceived);
                 }
-                catch (System.IO.IOException)
+                catch (System.IO.IOException e)
                 {
                     _serverView.ShowMonitorMessageLog("ATENCION: El jugador: " + _player.User + " se ha desconectado.");
                     RemovePlayer(_player);
@@ -192,7 +192,7 @@ namespace LudoServer.Services
         {
             foreach (Player j in _game.PlayersConnected)
             {
-                j.SendMessage(new Output_DeletePlayer(player, reassign));
+               j.SendMessage(new Output_DeletePlayer(player, reassign));
             }
         }
 
