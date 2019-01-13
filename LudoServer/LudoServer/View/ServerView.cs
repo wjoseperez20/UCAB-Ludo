@@ -26,7 +26,7 @@ namespace LudoServer.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!Connection.Create_Connection(this, 4, Game.GetGame))
+            if (!Connection.Create_Connection(this, 1, Game.GetGame))
                 MessageBox.Show("Ingresa una dirección IP valida");
             else
             {

@@ -63,6 +63,16 @@ namespace LudoClient.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap BlueChip {
+            get {
+                object obj = ResourceManager.GetObject("BlueChip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap board {
             get {
                 object obj = ResourceManager.GetObject("board", resourceCulture);
@@ -81,6 +91,16 @@ namespace LudoClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap emoticon_face_with_the_mouth_at_one_side_like_a_small_smile_in_a_rounded_square {
+            get {
+                object obj = ResourceManager.GetObject("emoticon_face_with_the_mouth_at_one_side_like_a_small_smile_in_a_rounded_square", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         public static System.Drawing.Icon favicon {
@@ -93,9 +113,59 @@ namespace LudoClient.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap GreenChip {
+            get {
+                object obj = ResourceManager.GetObject("GreenChip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap LogoUCAB {
             get {
                 object obj = ResourceManager.GetObject("LogoUCAB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap power_off {
+            get {
+                object obj = ResourceManager.GetObject("power_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap RedChip {
+            get {
+                object obj = ResourceManager.GetObject("RedChip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap sello_de_calidad_ucabista {
+            get {
+                object obj = ResourceManager.GetObject("sello_de_calidad_ucabista", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap YellowChip {
+            get {
+                object obj = ResourceManager.GetObject("YellowChip", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

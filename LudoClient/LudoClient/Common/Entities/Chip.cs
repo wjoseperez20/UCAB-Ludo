@@ -14,9 +14,11 @@ namespace LudoClient.Common.Entities
         private string _name;
         private Dictionary<int, Point> _coordinates;
 
-        public Chip(int id)
+        public Chip(int id, string name)
         {
             _id = id;
+            _name = name;
+            _coordinates = new Dictionary<int, Point>();
         }
 
         public int Id
@@ -39,6 +41,11 @@ namespace LudoClient.Common.Entities
         {
             get { return _coordinates; }
             set { _coordinates = value; }
+        }
+
+        public void AssingCoordinateChip(int Square, int x, int y)
+        {
+            _coordinates.Add(Square, new Point(x, y));
         }
     }
 }

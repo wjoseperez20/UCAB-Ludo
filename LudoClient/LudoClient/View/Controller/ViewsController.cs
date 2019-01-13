@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LudoClient.Common.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,7 +39,7 @@ namespace LudoClient.View.Controller
         public void StartGame()
         {
             _board.LoadPrincipalPlayer();
-            _board.ShowPrincipalPlayer();
+          //  _board.ShowPrincipalPlayer();
             _login.ManageWindows(_board);
             UpdateInfoPlayers();
             UpdateTurning();

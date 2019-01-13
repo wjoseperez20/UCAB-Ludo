@@ -19,6 +19,7 @@ namespace LudoClient.Logic.Message.Input
             player.Position = message.PopInt();
             player.Turn_Active = message.PopBool();
             game.AssignPlayerChip(player, message.PopInt());
+            player.PrincipalPlayer = true;
 
             game.CountPlayers = message.PopInt();
             int _connectedPlayers = message.PopInt();

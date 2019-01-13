@@ -13,10 +13,8 @@ namespace LudoClient.Common.Entities
     public class Player
     {
         private int _id;
-        private string _user;
-        private string _password;
         private string _name;
-        private string _lastname;
+        private string _password;
         private int _position;
         private bool _turn_active;
         private int _turn;
@@ -46,13 +44,12 @@ namespace LudoClient.Common.Entities
         public int Id
         {
             get { return this._id; }
-            set { _id = value; }
+            set { this._id = value; }
         }
 
-        public string User
+        public string Name
         {
-            get { return this._user; }
-            set { this._user = value; }
+            get { return this._name; }
         }
 
         public int Position
@@ -76,19 +73,6 @@ namespace LudoClient.Common.Entities
         public string Password
         {
             get { return _password; }
-            set { _password = value; }
-        }
-
-        public string Name
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
-
-        public string Lastname
-        {
-            get { return _lastname; }
-            set { _lastname = value; }
         }
 
         public int Turn
@@ -105,8 +89,8 @@ namespace LudoClient.Common.Entities
 
         public bool PrincipalPlayer
         {
-            get { return _principalPlayer; }
-            set { _principalPlayer = value; }
+            get { return this._principalPlayer; }
+            set { this._principalPlayer = value; }
         }
 
         public void ThrowDice()

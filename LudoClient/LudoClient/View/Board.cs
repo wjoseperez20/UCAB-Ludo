@@ -25,9 +25,26 @@ namespace LudoClient.View
 
         private void Board_Load(object sender, EventArgs e)
         {
-
+            blueChipLabel.Parent = boardLabel;
+            blueChipLabel.BackColor = Color.Transparent;
         }
 
+        private void Board_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Estás seguro que deseas cerrar el juego?", "¡Atención!",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                MessageBox.Show("¡Cobarde! Que mal perdedor", ">:(", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                System.Environment.Exit(1);
+            }
+            else
+            {
+                e.Cancel = true;
+                MessageBox.Show("Jaja casi pierdes todo tu esfuerzo", ":D", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
         public static Board GetBoard
         {
             get
@@ -77,7 +94,7 @@ namespace LudoClient.View
                 else
                     turn= "No";
 
-                MonitorBoardPlayer.Items.Add(player.Chip.Name + ": " + player.Name + " Turno Activo: " + turn.ToUpper() + "/3");
+               MonitorBoardPlayer.Items.Add(/*player.Chip.Name+*/ ": " + player.Name + " Turno Activo: " + turn.ToUpper() + "/3");
             }
         }
 
@@ -88,6 +105,12 @@ namespace LudoClient.View
 
         public void ShowPrincipalPlayer()
         {
+            
+            if (principalPlayer.Chip == null)
+            {
+                MessageBox.Show("hola2");
+            }
+
             string message = "Jugador: " + principalPlayer.Name + " - Turno: " + principalPlayer.Turn.ToString() + " - Ficha: " + principalPlayer.Chip.Name.ToUpper();
             this.Text = message;
         }
@@ -113,6 +136,16 @@ namespace LudoClient.View
         private void InvokeCloseWindow()
         {
             this.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void throwDiceButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

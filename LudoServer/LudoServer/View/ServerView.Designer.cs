@@ -55,10 +55,10 @@
             this.powerOffButton = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.monitorLogs = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.selloUcabLabel = new System.Windows.Forms.Label();
-            this.eyesLabel = new System.Windows.Forms.Label();
             this.titleServer = new System.Windows.Forms.Label();
+            this.eyesLabel = new System.Windows.Forms.Label();
+            this.selloUcabLabel = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -356,27 +356,16 @@
             this.monitorLogs.Size = new System.Drawing.Size(775, 304);
             this.monitorLogs.TabIndex = 1;
             // 
-            // panel6
+            // titleServer
             // 
-            this.panel6.Controls.Add(this.selloUcabLabel);
-            this.panel6.Controls.Add(this.eyesLabel);
-            this.panel6.Controls.Add(this.titleServer);
-            this.panel6.Location = new System.Drawing.Point(41, 341);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(336, 85);
-            this.panel6.TabIndex = 22;
-            // 
-            // selloUcabLabel
-            // 
-            this.selloUcabLabel.AllowDrop = true;
-            this.selloUcabLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selloUcabLabel.Image = global::LudoServer.Properties.Resources.sello_de_calidad_ucabista;
-            this.selloUcabLabel.Location = new System.Drawing.Point(256, 12);
-            this.selloUcabLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.selloUcabLabel.Name = "selloUcabLabel";
-            this.selloUcabLabel.Size = new System.Drawing.Size(54, 60);
-            this.selloUcabLabel.TabIndex = 27;
+            this.titleServer.AutoSize = true;
+            this.titleServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleServer.Location = new System.Drawing.Point(66, 21);
+            this.titleServer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.titleServer.Name = "titleServer";
+            this.titleServer.Size = new System.Drawing.Size(148, 44);
+            this.titleServer.TabIndex = 25;
+            this.titleServer.Text = "Monitor";
             // 
             // eyesLabel
             // 
@@ -389,16 +378,27 @@
             this.eyesLabel.Size = new System.Drawing.Size(54, 60);
             this.eyesLabel.TabIndex = 26;
             // 
-            // titleServer
+            // selloUcabLabel
             // 
-            this.titleServer.AutoSize = true;
-            this.titleServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleServer.Location = new System.Drawing.Point(66, 21);
-            this.titleServer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.titleServer.Name = "titleServer";
-            this.titleServer.Size = new System.Drawing.Size(148, 44);
-            this.titleServer.TabIndex = 25;
-            this.titleServer.Text = "Monitor";
+            this.selloUcabLabel.AllowDrop = true;
+            this.selloUcabLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selloUcabLabel.Image = global::LudoServer.Properties.Resources.sello_de_calidad_ucabista;
+            this.selloUcabLabel.Location = new System.Drawing.Point(256, 12);
+            this.selloUcabLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.selloUcabLabel.Name = "selloUcabLabel";
+            this.selloUcabLabel.Size = new System.Drawing.Size(54, 60);
+            this.selloUcabLabel.TabIndex = 27;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.selloUcabLabel);
+            this.panel6.Controls.Add(this.eyesLabel);
+            this.panel6.Controls.Add(this.titleServer);
+            this.panel6.Location = new System.Drawing.Point(41, 341);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(336, 85);
+            this.panel6.TabIndex = 22;
             // 
             // ServerView
             // 
@@ -458,11 +458,11 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox monitorLogs;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label eyesLabel;
-        private System.Windows.Forms.Label titleServer;
-        private System.Windows.Forms.Label selloUcabLabel;
         private System.Windows.Forms.Button powerOffButton;
+        private System.Windows.Forms.Label titleServer;
+        private System.Windows.Forms.Label eyesLabel;
+        private System.Windows.Forms.Label selloUcabLabel;
+        private System.Windows.Forms.Panel panel6;
     }
 }
 
