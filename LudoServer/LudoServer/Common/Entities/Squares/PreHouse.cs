@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LudoServer.Common.Entities.Square
+namespace LudoServer.Common.Entities.Squares
 {
-    public class House
+    public class PreHouse
     {
     }
 }

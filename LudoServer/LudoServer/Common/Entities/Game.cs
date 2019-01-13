@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using LudoServer.Logic.Message.Core.Interfaces;
 using LudoServer.Logic.Message.Output;
 using LudoServer.Persistence;
+using LudoServer.Common.Entities.Squares;
 
 namespace LudoServer.Common.Entities
 {
@@ -13,6 +14,7 @@ namespace LudoServer.Common.Entities
     {
         public List<Player> PlayersRegistered;
         public List<Player> PlayersConnected;
+        public List<Square> Squares;
         public List<Chip> Chips;
         public bool Connected;
         public bool StartedGame;
@@ -20,7 +22,7 @@ namespace LudoServer.Common.Entities
         private UserJson _json;
         private Random functionRandom;
         private static Game _game = null;
-            
+                
         private Game()
         {
             InitValues();
@@ -91,7 +93,15 @@ namespace LudoServer.Common.Entities
         public void ManagePlayPlayer(Player player)
         {
             player.Play();
-            //Casillas hablar con felix
+
+            int SquareId = player.Position;
+
+            Square _square = Squares.Find(c => c.Position == SquareId);
+
+            if (_square == null)
+                return;
+
+            _square.ExecuteEffect(player);
         }
 
 

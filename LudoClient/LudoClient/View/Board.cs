@@ -21,6 +21,18 @@ namespace LudoClient.View
         {
             InitializeComponent();
             _game = Game.GetGame;
+            blueChipLabel.Visible = false;
+        }
+
+        public static Board GetBoard
+        {
+            get
+            {
+                if (_board == null)
+                    _board = new Board();
+
+                return _board;
+            }
         }
 
         private void Board_Load(object sender, EventArgs e)
@@ -45,17 +57,7 @@ namespace LudoClient.View
                 MessageBox.Show("Jaja casi pierdes todo tu esfuerzo", ":D", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-        public static Board GetBoard
-        {
-            get
-            {
-                if (_board == null)
-                    _board = new Board();
-
-                return _board;
-            }
-        }
-
+      
         private void titleLabel_Click(object sender, EventArgs e)
         {
 
@@ -94,7 +96,25 @@ namespace LudoClient.View
                 else
                     turn= "No";
 
-               MonitorBoardPlayer.Items.Add(/*player.Chip.Name+*/ ": " + player.Name + " Turno Activo: " + turn.ToUpper() + "/3");
+               MonitorBoardPlayer.Items.Add(player.Chip.Name + ": " + player.Name + " Turno Activo: " + turn.ToUpper());
+            }
+        }
+
+        public void ShowChips()
+        {
+            foreach (Player player in _game.Players)
+            {
+                if (player.Chip.Id == 1)
+                    player.Chip.AssignLabel(blueChipLabel);
+                else if (player.Chip.Id == 2)
+                    player.Chip.AssignLabel(blueChipLabel);
+                else if (player.Chip.Id == 3)
+                    player.Chip.AssignLabel(blueChipLabel);
+                else
+                    player.Chip.AssignLabel(blueChipLabel);
+
+                player.Chip.Image.Visible = true;
+                player.Chip.Image.Location = player.Chip.Coordinates[0];
             }
         }
 
@@ -105,12 +125,6 @@ namespace LudoClient.View
 
         public void ShowPrincipalPlayer()
         {
-            
-            if (principalPlayer.Chip == null)
-            {
-                MessageBox.Show("hola2");
-            }
-
             string message = "Jugador: " + principalPlayer.Name + " - Turno: " + principalPlayer.Turn.ToString() + " - Ficha: " + principalPlayer.Chip.Name.ToUpper();
             this.Text = message;
         }

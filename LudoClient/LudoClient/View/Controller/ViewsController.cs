@@ -39,7 +39,8 @@ namespace LudoClient.View.Controller
         public void StartGame()
         {
             _board.LoadPrincipalPlayer();
-          //  _board.ShowPrincipalPlayer();
+            _board.ShowPrincipalPlayer();
+            _board.ShowChips();
             _login.ManageWindows(_board);
             UpdateInfoPlayers();
             UpdateTurning();

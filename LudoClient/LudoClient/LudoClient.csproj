@@ -54,6 +54,12 @@
     <Compile Include="Common\Entities\Chip.cs" />
     <Compile Include="Common\Entities\Game.cs" />
     <Compile Include="Common\Entities\Player.cs" />
+    <Compile Include="Common\Entities\Squares\House.cs" />
+    <Compile Include="Common\Entities\Squares\Normal.cs" />
+    <Compile Include="Common\Entities\Squares\PreHouse.cs" />
+    <Compile Include="Common\Entities\Squares\Square.cs" />
+    <Compile Include="Common\Entities\Squares\SquareType.cs" />
+    <Compile Include="Common\Entities\Squares\Start.cs" />
     <Compile Include="Logic\Message\Core\BuiltOutputPackage.cs" />
     <Compile Include="Logic\Message\Core\Constants\InputCipher.cs" />
     <Compile Include="Logic\Message\Core\Constants\OutputCipher.cs" />

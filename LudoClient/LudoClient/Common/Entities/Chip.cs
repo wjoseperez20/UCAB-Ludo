@@ -4,12 +4,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace LudoClient.Common.Entities
 {
     public class Chip
     {
         private int _id;
+        private Label _image;
         private bool _assigned;
         private string _name;
         private Dictionary<int, Point> _coordinates;
@@ -24,6 +26,11 @@ namespace LudoClient.Common.Entities
         public int Id
         {
             get { return _id; }
+        }
+
+        public Label Image
+        {
+            get { return _image; }
         }
 
         public bool Assigned
@@ -46,6 +53,11 @@ namespace LudoClient.Common.Entities
         public void AssingCoordinateChip(int Square, int x, int y)
         {
             _coordinates.Add(Square, new Point(x, y));
+        }
+
+        public void AssignLabel(Label label)
+        {
+            _image = label;
         }
     }
 }

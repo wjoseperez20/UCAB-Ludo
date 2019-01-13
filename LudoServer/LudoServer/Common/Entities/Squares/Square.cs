@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-namespace LudoServer.Common.Entities.Square
+namespace LudoServer.Common.Entities.Squares
 {
     public abstract class Square
     {
