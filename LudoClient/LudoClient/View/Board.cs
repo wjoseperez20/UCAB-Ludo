@@ -21,7 +21,8 @@ namespace LudoClient.View
         {
             InitializeComponent();
             _game = Game.GetGame;
-            blueChipLabel.Visible = false;
+            blueChipLabel.Parent = boardLabel;
+            blueChipLabel.BackColor = Color.Transparent;
         }
 
         public static Board GetBoard
@@ -158,6 +159,11 @@ namespace LudoClient.View
         }
 
         private void throwDiceButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void blueChipLabel_Click(object sender, EventArgs e)
         {
 
         }

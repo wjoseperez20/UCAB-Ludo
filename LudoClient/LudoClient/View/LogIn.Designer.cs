@@ -42,9 +42,10 @@
             // 
             // bLoginUser
             // 
-            this.bLoginUser.Location = new System.Drawing.Point(399, 327);
+            this.bLoginUser.Location = new System.Drawing.Point(299, 266);
+            this.bLoginUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bLoginUser.Name = "bLoginUser";
-            this.bLoginUser.Size = new System.Drawing.Size(163, 48);
+            this.bLoginUser.Size = new System.Drawing.Size(122, 39);
             this.bLoginUser.TabIndex = 0;
             this.bLoginUser.Text = "INICIAR";
             this.bLoginUser.UseVisualStyleBackColor = true;
@@ -54,9 +55,10 @@
             // 
             this.loginLabel.AutoSize = true;
             this.loginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabel.Location = new System.Drawing.Point(155, 21);
+            this.loginLabel.Location = new System.Drawing.Point(116, 17);
+            this.loginLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(241, 42);
+            this.loginLabel.Size = new System.Drawing.Size(195, 36);
             this.loginLabel.TabIndex = 1;
             this.loginLabel.Text = "Iniciar Sesión";
             // 
@@ -64,9 +66,10 @@
             // 
             this.userNameLabel.AutoSize = true;
             this.userNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNameLabel.Location = new System.Drawing.Point(30, 109);
+            this.userNameLabel.Location = new System.Drawing.Point(22, 89);
+            this.userNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(186, 25);
+            this.userNameLabel.Size = new System.Drawing.Size(150, 20);
             this.userNameLabel.TabIndex = 2;
             this.userNameLabel.Text = "Nombre de Usuario:";
             this.userNameLabel.Click += new System.EventHandler(this.label2_Click);
@@ -75,59 +78,64 @@
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.Location = new System.Drawing.Point(112, 187);
+            this.passwordLabel.Location = new System.Drawing.Point(84, 152);
+            this.passwordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(104, 25);
+            this.passwordLabel.Size = new System.Drawing.Size(82, 20);
             this.passwordLabel.TabIndex = 3;
             this.passwordLabel.Text = "Password:";
             // 
             // label4
             // 
             this.label4.Image = global::LudoClient.Properties.Resources.LogoUCAB;
-            this.label4.Location = new System.Drawing.Point(12, 308);
+            this.label4.Location = new System.Drawing.Point(9, 250);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(381, 85);
+            this.label4.Size = new System.Drawing.Size(286, 69);
             this.label4.TabIndex = 4;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // userNameText
             // 
-            this.userNameText.Location = new System.Drawing.Point(223, 111);
+            this.userNameText.Location = new System.Drawing.Point(167, 90);
+            this.userNameText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.userNameText.Name = "userNameText";
-            this.userNameText.Size = new System.Drawing.Size(306, 22);
+            this.userNameText.Size = new System.Drawing.Size(230, 20);
             this.userNameText.TabIndex = 5;
             // 
             // passwordText
             // 
-            this.passwordText.Location = new System.Drawing.Point(223, 189);
+            this.passwordText.Location = new System.Drawing.Point(167, 154);
+            this.passwordText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.passwordText.Name = "passwordText";
             this.passwordText.PasswordChar = '*';
-            this.passwordText.Size = new System.Drawing.Size(306, 22);
+            this.passwordText.Size = new System.Drawing.Size(230, 20);
             this.passwordText.TabIndex = 6;
             // 
             // noteLabel
             // 
             this.noteLabel.AutoSize = true;
-            this.noteLabel.Location = new System.Drawing.Point(12, 268);
+            this.noteLabel.Location = new System.Drawing.Point(9, 218);
+            this.noteLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.noteLabel.Name = "noteLabel";
-            this.noteLabel.Size = new System.Drawing.Size(369, 17);
+            this.noteLabel.Size = new System.Drawing.Size(273, 13);
             this.noteLabel.TabIndex = 5;
             this.noteLabel.Text = "Nota: Si no se encuentra registrado pida al administrador";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 285);
+            this.label1.Location = new System.Drawing.Point(9, 232);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 17);
+            this.label1.Size = new System.Drawing.Size(161, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "del juego que le cree un usuario.";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 402);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(431, 327);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.noteLabel);
             this.Controls.Add(this.passwordText);
@@ -138,6 +146,7 @@
             this.Controls.Add(this.loginLabel);
             this.Controls.Add(this.bLoginUser);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Login";
             this.Text = "Ludo UCAB - Login";
             this.Load += new System.EventHandler(this.Login_Load);

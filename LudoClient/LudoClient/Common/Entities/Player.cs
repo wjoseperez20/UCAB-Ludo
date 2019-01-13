@@ -7,6 +7,7 @@ using System.Net.Sockets;
 using LudoClient.Logic.Message.Core.Interfaces;
 using System.Windows.Forms;
 using LudoClient.Logic.Message.Output;
+using System.Drawing;
 
 namespace LudoClient.Common.Entities
 {
@@ -21,6 +22,7 @@ namespace LudoClient.Common.Entities
         private bool _principalPlayer;
         private TcpClient _client;
         private Chip _chip;
+        public Dictionary<int, Point> _normalCoordinates;
         public byte[] Reading;
         public byte[] Writing;
 
