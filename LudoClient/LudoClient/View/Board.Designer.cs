@@ -72,7 +72,6 @@
             this.monitorLogs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.monitorLogs.Size = new System.Drawing.Size(428, 253);
             this.monitorLogs.TabIndex = 21;
-            this.monitorLogs.Text = "monitorLogsGame";
             // 
             // label3
             // 
