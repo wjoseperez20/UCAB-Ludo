@@ -23,8 +23,11 @@ namespace LudoClient.Common.Entities
         private TcpClient _client;
         private Chip _chip;
         public Dictionary<int, Point> _normalCoordinates;
+        public Dictionary<int, Point> _startCoordinates;
+        public Dictionary<int, Point> _preHouseCoordinates;
         public byte[] Reading;
         public byte[] Writing;
+        public List<Chip> Chips = new List<Chip>();
 
         public Player(string name, string password)
         {

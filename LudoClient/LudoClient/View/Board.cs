@@ -42,6 +42,11 @@ namespace LudoClient.View
             blueChipLabel.BackColor = Color.Transparent;
         }
 
+        private void Board_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Environment.Exit(0);
+        }
+
         private void Board_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("¿Estás seguro que deseas cerrar el juego?", "¡Atención!",
@@ -166,6 +171,37 @@ namespace LudoClient.View
         private void blueChipLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void noteLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void powerOffButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Estás seguro que deseas cerrar el juego?", "¡Atención!",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                MessageBox.Show("¡Cobarde! Que mal perdedor", ">:(", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                System.Environment.Exit(1);
+            }
+            else
+            {
+                MessageBox.Show("Jaja casi pierdes todo tu esfuerzo", ":D", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

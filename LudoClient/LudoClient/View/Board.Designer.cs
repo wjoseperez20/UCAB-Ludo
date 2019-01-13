@@ -42,6 +42,13 @@
             this.selloUcabLabel = new System.Windows.Forms.Label();
             this.eyesLabel = new System.Windows.Forms.Label();
             this.titleServer = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.noteLabel = new System.Windows.Forms.Label();
+            this.buttonChip1 = new System.Windows.Forms.Button();
+            this.buttonChip2 = new System.Windows.Forms.Button();
+            this.buttonChip3 = new System.Windows.Forms.Button();
+            this.buttonChip4 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +72,7 @@
             // 
             this.monitorLogs.BackColor = System.Drawing.Color.White;
             this.monitorLogs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monitorLogs.Location = new System.Drawing.Point(631, 115);
+            this.monitorLogs.Location = new System.Drawing.Point(631, 242);
             this.monitorLogs.Multiline = true;
             this.monitorLogs.Name = "monitorLogs";
             this.monitorLogs.ReadOnly = true;
@@ -77,7 +84,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(628, 95);
+            this.label3.Location = new System.Drawing.Point(628, 222);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 17);
             this.label3.TabIndex = 20;
@@ -88,7 +95,7 @@
             this.MonitorBoardPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MonitorBoardPlayer.FormattingEnabled = true;
             this.MonitorBoardPlayer.ItemHeight = 15;
-            this.MonitorBoardPlayer.Location = new System.Drawing.Point(631, 357);
+            this.MonitorBoardPlayer.Location = new System.Drawing.Point(631, 484);
             this.MonitorBoardPlayer.Name = "MonitorBoardPlayer";
             this.MonitorBoardPlayer.Size = new System.Drawing.Size(322, 199);
             this.MonitorBoardPlayer.TabIndex = 23;
@@ -97,7 +104,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(628, 338);
+            this.label1.Location = new System.Drawing.Point(628, 465);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 17);
             this.label1.TabIndex = 22;
@@ -140,7 +147,7 @@
             this.powerOffButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.powerOffButton.Image = global::LudoClient.Properties.Resources.power_off;
             this.powerOffButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.powerOffButton.Location = new System.Drawing.Point(682, 587);
+            this.powerOffButton.Location = new System.Drawing.Point(684, 710);
             this.powerOffButton.Margin = new System.Windows.Forms.Padding(2);
             this.powerOffButton.Name = "powerOffButton";
             this.powerOffButton.Size = new System.Drawing.Size(269, 54);
@@ -148,13 +155,14 @@
             this.powerOffButton.Text = "Desconectarse del Juego   ";
             this.powerOffButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.powerOffButton.UseVisualStyleBackColor = true;
+            this.powerOffButton.Click += new System.EventHandler(this.powerOffButton_Click);
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.selloUcabLabel);
             this.panel6.Controls.Add(this.eyesLabel);
             this.panel6.Controls.Add(this.titleServer);
-            this.panel6.Location = new System.Drawing.Point(10, 581);
+            this.panel6.Location = new System.Drawing.Point(12, 706);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(270, 61);
             this.panel6.TabIndex = 27;
@@ -189,10 +197,87 @@
             this.titleServer.TabIndex = 25;
             this.titleServer.Text = "Tablero";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 684);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(327, 13);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Recuerde: El 1 y el 6 permiten desbloquear una ficha o volver a tirar";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            // 
+            // noteLabel
+            // 
+            this.noteLabel.AutoSize = true;
+            this.noteLabel.Location = new System.Drawing.Point(11, 670);
+            this.noteLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.noteLabel.Name = "noteLabel";
+            this.noteLabel.Size = new System.Drawing.Size(365, 13);
+            this.noteLabel.TabIndex = 28;
+            this.noteLabel.Text = "Nota: Debe seleccionar la ficha que quiere que se mueva, al lanzar el dado.";
+            this.noteLabel.Click += new System.EventHandler(this.noteLabel_Click);
+            // 
+            // buttonChip1
+            // 
+            this.buttonChip1.Location = new System.Drawing.Point(685, 93);
+            this.buttonChip1.Name = "buttonChip1";
+            this.buttonChip1.Size = new System.Drawing.Size(92, 52);
+            this.buttonChip1.TabIndex = 30;
+            this.buttonChip1.Text = "Ficha 1 ";
+            this.buttonChip1.UseVisualStyleBackColor = true;
+            // 
+            // buttonChip2
+            // 
+            this.buttonChip2.Location = new System.Drawing.Point(807, 93);
+            this.buttonChip2.Name = "buttonChip2";
+            this.buttonChip2.Size = new System.Drawing.Size(92, 52);
+            this.buttonChip2.TabIndex = 31;
+            this.buttonChip2.Text = "Ficha 2";
+            this.buttonChip2.UseVisualStyleBackColor = true;
+            // 
+            // buttonChip3
+            // 
+            this.buttonChip3.Location = new System.Drawing.Point(685, 158);
+            this.buttonChip3.Name = "buttonChip3";
+            this.buttonChip3.Size = new System.Drawing.Size(92, 52);
+            this.buttonChip3.TabIndex = 32;
+            this.buttonChip3.Text = "Ficha 3";
+            this.buttonChip3.UseVisualStyleBackColor = true;
+            // 
+            // buttonChip4
+            // 
+            this.buttonChip4.Location = new System.Drawing.Point(807, 158);
+            this.buttonChip4.Name = "buttonChip4";
+            this.buttonChip4.Size = new System.Drawing.Size(92, 52);
+            this.buttonChip4.TabIndex = 33;
+            this.buttonChip4.Text = "Ficha 4";
+            this.buttonChip4.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(841, 7);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 15);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Resultado:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
             // Board
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(977, 652);
+            this.ClientSize = new System.Drawing.Size(977, 779);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.buttonChip4);
+            this.Controls.Add(this.buttonChip3);
+            this.Controls.Add(this.buttonChip2);
+            this.Controls.Add(this.buttonChip1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.noteLabel);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.powerOffButton);
             this.Controls.Add(this.panel3);
@@ -228,5 +313,12 @@
         private System.Windows.Forms.Label selloUcabLabel;
         private System.Windows.Forms.Label eyesLabel;
         private System.Windows.Forms.Label titleServer;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label noteLabel;
+        private System.Windows.Forms.Button buttonChip1;
+        private System.Windows.Forms.Button buttonChip2;
+        private System.Windows.Forms.Button buttonChip3;
+        private System.Windows.Forms.Button buttonChip4;
+        private System.Windows.Forms.Label label4;
     }
 }

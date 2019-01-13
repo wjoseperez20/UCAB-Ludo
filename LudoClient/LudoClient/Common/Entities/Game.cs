@@ -14,10 +14,21 @@ namespace LudoClient.Common.Entities
         private int _countPlayers;
         public bool StartedGame;
         private static Game _game;
+
         public Dictionary<int, Point> _normalCoordinatesBlue;
         public Dictionary<int, Point> _normalCoordinatesYellow;
         public Dictionary<int, Point> _normalCoordinatesRed;
         public Dictionary<int, Point> _normalCoordinatesGreen;
+
+        public Dictionary<int, Point> _startCoordinatesBlue;
+        public Dictionary<int, Point> _startCoordinatesYellow;
+        public Dictionary<int, Point> _startCoordinatesRed;
+        public Dictionary<int, Point> _startCoordinatesGreen;
+
+        public Dictionary<int, Point> _preHouseCoordinatesBlue;
+        public Dictionary<int, Point> _preHouseCoordinatesYellow;
+        public Dictionary<int, Point> _preHouseCoordinatesRed;
+        public Dictionary<int, Point> _preHouseCoordinatesGreen;
 
         private Game()
         {
@@ -26,10 +37,32 @@ namespace LudoClient.Common.Entities
             _normalCoordinatesYellow = new Dictionary<int, Point>();
             _normalCoordinatesRed = new Dictionary<int, Point>();
             _normalCoordinatesGreen = new Dictionary<int, Point>();
-            CreateCommonCordinatesBlue();
-            CreateCommonCordinatesYellow();
-            CreateCommonCordinatesRed();
-            CreateCommonCordinatesGreen();
+
+            _startCoordinatesBlue = new Dictionary<int, Point>();
+            _startCoordinatesYellow = new Dictionary<int, Point>();
+            _startCoordinatesRed = new Dictionary<int, Point>();
+            _startCoordinatesGreen = new Dictionary<int, Point>();
+
+            _preHouseCoordinatesBlue = new Dictionary<int, Point>();
+            _preHouseCoordinatesYellow = new Dictionary<int, Point>();
+            _preHouseCoordinatesRed = new Dictionary<int, Point>();
+            _preHouseCoordinatesGreen = new Dictionary<int, Point>();
+
+            CreateCommonCoordinatesBlue();
+            CreateCommonCoordinatesYellow();
+            CreateCommonCoordinatesRed();
+            CreateCommonCoordinatesGreen();
+
+            CreateStartCoordinatesBlue();
+            CreateStartCoordinatesYellow();
+            CreateStartCoordinatesRed();
+            CreateStartCoordinatesGreen();
+
+            CreatePreHouseCoordinatesBlue();
+            CreatePreHouseCoordinatesYellow();
+            CreatePreHouseCoordinatesRed();
+            CreatePreHouseCoordinatesGreen();
+
             CreateChips();
         }
 
@@ -69,10 +102,30 @@ namespace LudoClient.Common.Entities
 
         public void AssignPlayerChip(Player player, int idChip)
         {
-            if (player.Chip != null)
-                return;
-
-            player.Chip = Chips.Find(x => x.Id == idChip);
+            if (idChip == 1)
+            {
+                player._normalCoordinates = _normalCoordinatesBlue;
+                player._startCoordinates = _startCoordinatesBlue;
+                player._preHouseCoordinates = _preHouseCoordinatesBlue;
+            }
+            if(idChip == 2)
+            {
+                player._normalCoordinates = _normalCoordinatesRed;
+                player._startCoordinates = _startCoordinatesRed;
+                player._preHouseCoordinates = _preHouseCoordinatesRed;
+            }
+            if (idChip == 3)
+            {
+                player._normalCoordinates = _normalCoordinatesYellow;
+                player._startCoordinates = _startCoordinatesYellow;
+                player._preHouseCoordinates = _preHouseCoordinatesYellow;
+            }
+            if (idChip == 4)
+            {
+                player._normalCoordinates = _normalCoordinatesGreen;
+                player._startCoordinates = _startCoordinatesGreen;
+                player._preHouseCoordinates = _preHouseCoordinatesGreen;
+            }
         }
 
         private void CreateChips()
@@ -97,7 +150,7 @@ namespace LudoClient.Common.Entities
 
         }
 
-        private void CreateCommonCordinatesBlue()
+        private void CreateCommonCoordinatesBlue()
         {
             _normalCoordinatesBlue.Add(1, new Point(226, 462));
             _normalCoordinatesBlue.Add(2, new Point(226, 429));
@@ -153,7 +206,7 @@ namespace LudoClient.Common.Entities
             _normalCoordinatesBlue.Add(52, new Point(226, 497));
         }
 
-        private void CreateCommonCordinatesRed()
+        private void CreateCommonCoordinatesRed()
         {
             _normalCoordinatesRed.Add(1, new Point(56, 221));
             _normalCoordinatesRed.Add(2, new Point(91, 221));
@@ -209,7 +262,7 @@ namespace LudoClient.Common.Entities
             _normalCoordinatesRed.Add(52, new Point(23, 221));
         }
 
-        private void CreateCommonCordinatesYellow()
+        private void CreateCommonCoordinatesYellow()
         {
             _normalCoordinatesYellow.Add(1, new Point(462, 290));
             _normalCoordinatesYellow.Add(2, new Point(428, 290));
@@ -266,7 +319,7 @@ namespace LudoClient.Common.Entities
 
         }
 
-        private void CreateCommonCordinatesGreen()
+        private void CreateCommonCoordinatesGreen()
         {
             _normalCoordinatesGreen.Add(1, new Point(293, 49));
             _normalCoordinatesGreen.Add(2, new Point(293, 83));
@@ -321,6 +374,67 @@ namespace LudoClient.Common.Entities
             _normalCoordinatesGreen.Add(51, new Point(260, 14));
             _normalCoordinatesGreen.Add(52, new Point(293, 14));
 
+        }
+
+        private void CreateStartCoordinatesBlue() {
+            _startCoordinatesBlue.Add(1, new Point(73, 376));
+            _startCoordinatesBlue.Add(2, new Point(73, 445));
+            _startCoordinatesBlue.Add(3, new Point(141, 445));
+            _startCoordinatesBlue.Add(4, new Point(141, 376));
+        }
+
+        private void CreateStartCoordinatesRed() {
+            _startCoordinatesRed.Add(1, new Point(73, 66));
+            _startCoordinatesRed.Add(2, new Point(73, 135));
+            _startCoordinatesRed.Add(3, new Point(141, 135));
+            _startCoordinatesRed.Add(4, new Point(141, 66));
+        }
+
+        private void CreateStartCoordinatesYellow() {
+            _startCoordinatesYellow.Add(1, new Point(378, 377));
+            _startCoordinatesYellow.Add(2, new Point(378, 445));
+            _startCoordinatesYellow.Add(3, new Point(446, 445));
+            _startCoordinatesYellow.Add(4, new Point(446, 376));
+        }
+
+        private void CreateStartCoordinatesGreen() {
+            _startCoordinatesGreen.Add(1, new Point(378, 64));
+            _startCoordinatesGreen.Add(2, new Point(378, 135));
+            _startCoordinatesGreen.Add(3, new Point(446, 135));
+            _startCoordinatesGreen.Add(4, new Point(446, 65));
+
+        }
+
+        private void CreatePreHouseCoordinatesBlue() {
+            _preHouseCoordinatesBlue.Add(1, new Point(259, 463));
+            _preHouseCoordinatesBlue.Add(2, new Point(259, 427));
+            _preHouseCoordinatesBlue.Add(3, new Point(259, 393));
+            _preHouseCoordinatesBlue.Add(4, new Point(259, 359));
+            _preHouseCoordinatesBlue.Add(5, new Point(259, 324));
+        }
+
+        private void CreatePreHouseCoordinatesRed() {
+            _preHouseCoordinatesRed.Add(1, new Point(56, 256));
+            _preHouseCoordinatesRed.Add(2, new Point(91, 256));
+            _preHouseCoordinatesRed.Add(3, new Point(125, 256));
+            _preHouseCoordinatesRed.Add(4, new Point(158, 256));
+            _preHouseCoordinatesRed.Add(5, new Point(192, 256));
+        }
+
+        private void CreatePreHouseCoordinatesYellow() {
+            _preHouseCoordinatesYellow.Add(1, new Point(463, 256));
+            _preHouseCoordinatesYellow.Add(2, new Point(429, 256));
+            _preHouseCoordinatesYellow.Add(3, new Point(395, 256));
+            _preHouseCoordinatesYellow.Add(4, new Point(362, 256));
+            _preHouseCoordinatesYellow.Add(5, new Point(328, 256));
+        }
+
+        private void CreatePreHouseCoordinatesGreen() {
+            _preHouseCoordinatesGreen.Add(1, new Point(259, 48));
+            _preHouseCoordinatesGreen.Add(2, new Point(259, 83));
+            _preHouseCoordinatesGreen.Add(3, new Point(259, 117));
+            _preHouseCoordinatesGreen.Add(4, new Point(259, 152));
+            _preHouseCoordinatesGreen.Add(5, new Point(259, 186));
         }
     }
 }
