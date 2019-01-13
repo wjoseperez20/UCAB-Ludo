@@ -123,7 +123,7 @@
             // 
             this.blueChipLabel.BackColor = System.Drawing.Color.Transparent;
             this.blueChipLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.blueChipLabel.Image = global::LudoClient.Properties.Resources.BlueChip;
+            this.blueChipLabel.Image = ((System.Drawing.Image)(resources.GetObject("blueChipLabel.Image")));
             this.blueChipLabel.Location = new System.Drawing.Point(226, 394);
             this.blueChipLabel.Margin = new System.Windows.Forms.Padding(0);
             this.blueChipLabel.Name = "blueChipLabel";
@@ -147,7 +147,7 @@
             this.powerOffButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.powerOffButton.Image = global::LudoClient.Properties.Resources.power_off;
             this.powerOffButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.powerOffButton.Location = new System.Drawing.Point(684, 710);
+            this.powerOffButton.Location = new System.Drawing.Point(336, 629);
             this.powerOffButton.Margin = new System.Windows.Forms.Padding(2);
             this.powerOffButton.Name = "powerOffButton";
             this.powerOffButton.Size = new System.Drawing.Size(269, 54);
@@ -162,7 +162,7 @@
             this.panel6.Controls.Add(this.selloUcabLabel);
             this.panel6.Controls.Add(this.eyesLabel);
             this.panel6.Controls.Add(this.titleServer);
-            this.panel6.Location = new System.Drawing.Point(12, 706);
+            this.panel6.Location = new System.Drawing.Point(12, 626);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(270, 61);
             this.panel6.TabIndex = 27;
@@ -200,7 +200,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 684);
+            this.label2.Location = new System.Drawing.Point(11, 598);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(327, 13);
@@ -211,7 +211,7 @@
             // noteLabel
             // 
             this.noteLabel.AutoSize = true;
-            this.noteLabel.Location = new System.Drawing.Point(11, 670);
+            this.noteLabel.Location = new System.Drawing.Point(11, 584);
             this.noteLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.noteLabel.Name = "noteLabel";
             this.noteLabel.Size = new System.Drawing.Size(365, 13);
@@ -270,7 +270,7 @@
             // Board
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(977, 779);
+            this.ClientSize = new System.Drawing.Size(977, 703);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonChip4);
             this.Controls.Add(this.buttonChip3);
