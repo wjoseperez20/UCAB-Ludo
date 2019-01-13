@@ -136,13 +136,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
-    <None Include="Resources\emoticon-face-with-the-mouth-at-one-side-like-a-small-smile-in-a-rounded-square.png" />
-    <None Include="Resources\sello de calidad ucabista.jpg" />
-    <None Include="Resources\power-off.png" />
     <None Include="Resources\YellowChip.png" />
     <None Include="Resources\RedChip.png" />
     <None Include="Resources\GreenChip.png" />
     <None Include="Resources\BlueChip.png" />
+    <None Include="Resources\emoticon-face-with-the-mouth-at-one-side-like-a-small-smile-in-a-rounded-square.png" />
+    <None Include="Resources\sello de calidad ucabista.jpg" />
+    <None Include="Resources\power-off.png" />
     <None Include="Resources\dice.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
