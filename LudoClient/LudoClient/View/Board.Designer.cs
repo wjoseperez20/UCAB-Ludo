@@ -152,178 +152,226 @@
             // yellowChipLabel2
             // 
             this.yellowChipLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.yellowChipLabel2.ForeColor = System.Drawing.Color.Transparent;
+            this.yellowChipLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yellowChipLabel2.ForeColor = System.Drawing.Color.Black;
             this.yellowChipLabel2.Image = global::LudoClient.Properties.Resources.YellowChip;
             this.yellowChipLabel2.Location = new System.Drawing.Point(398, 457);
             this.yellowChipLabel2.Margin = new System.Windows.Forms.Padding(0);
             this.yellowChipLabel2.Name = "yellowChipLabel2";
             this.yellowChipLabel2.Size = new System.Drawing.Size(28, 29);
             this.yellowChipLabel2.TabIndex = 41;
+            this.yellowChipLabel2.Text = "2";
+            this.yellowChipLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // yellowChipLabel4
             // 
             this.yellowChipLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.yellowChipLabel4.ForeColor = System.Drawing.Color.Transparent;
+            this.yellowChipLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yellowChipLabel4.ForeColor = System.Drawing.Color.Black;
             this.yellowChipLabel4.Image = global::LudoClient.Properties.Resources.YellowChip;
             this.yellowChipLabel4.Location = new System.Drawing.Point(464, 391);
             this.yellowChipLabel4.Margin = new System.Windows.Forms.Padding(0);
             this.yellowChipLabel4.Name = "yellowChipLabel4";
             this.yellowChipLabel4.Size = new System.Drawing.Size(28, 29);
             this.yellowChipLabel4.TabIndex = 40;
+            this.yellowChipLabel4.Text = "4";
+            this.yellowChipLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // yellowChipLabel3
             // 
             this.yellowChipLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.yellowChipLabel3.ForeColor = System.Drawing.Color.Transparent;
+            this.yellowChipLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yellowChipLabel3.ForeColor = System.Drawing.Color.Black;
             this.yellowChipLabel3.Image = global::LudoClient.Properties.Resources.YellowChip;
             this.yellowChipLabel3.Location = new System.Drawing.Point(464, 457);
             this.yellowChipLabel3.Margin = new System.Windows.Forms.Padding(0);
             this.yellowChipLabel3.Name = "yellowChipLabel3";
             this.yellowChipLabel3.Size = new System.Drawing.Size(28, 29);
             this.yellowChipLabel3.TabIndex = 39;
+            this.yellowChipLabel3.Text = "3";
+            this.yellowChipLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // yellowChipLabel1
             // 
             this.yellowChipLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.yellowChipLabel1.ForeColor = System.Drawing.Color.Transparent;
+            this.yellowChipLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yellowChipLabel1.ForeColor = System.Drawing.Color.Black;
             this.yellowChipLabel1.Image = global::LudoClient.Properties.Resources.YellowChip;
             this.yellowChipLabel1.Location = new System.Drawing.Point(398, 391);
             this.yellowChipLabel1.Margin = new System.Windows.Forms.Padding(0);
             this.yellowChipLabel1.Name = "yellowChipLabel1";
             this.yellowChipLabel1.Size = new System.Drawing.Size(28, 29);
             this.yellowChipLabel1.TabIndex = 38;
+            this.yellowChipLabel1.Text = "1";
+            this.yellowChipLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // greenChipLabel3
             // 
             this.greenChipLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.greenChipLabel3.ForeColor = System.Drawing.Color.Transparent;
+            this.greenChipLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.greenChipLabel3.ForeColor = System.Drawing.Color.Black;
             this.greenChipLabel3.Image = global::LudoClient.Properties.Resources.GreenChip;
             this.greenChipLabel3.Location = new System.Drawing.Point(464, 147);
             this.greenChipLabel3.Margin = new System.Windows.Forms.Padding(0);
             this.greenChipLabel3.Name = "greenChipLabel3";
             this.greenChipLabel3.Size = new System.Drawing.Size(28, 29);
             this.greenChipLabel3.TabIndex = 37;
+            this.greenChipLabel3.Text = "3";
+            this.greenChipLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // greenChipLabel2
             // 
             this.greenChipLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.greenChipLabel2.ForeColor = System.Drawing.Color.Transparent;
+            this.greenChipLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.greenChipLabel2.ForeColor = System.Drawing.Color.Black;
             this.greenChipLabel2.Image = global::LudoClient.Properties.Resources.GreenChip;
             this.greenChipLabel2.Location = new System.Drawing.Point(398, 147);
             this.greenChipLabel2.Margin = new System.Windows.Forms.Padding(0);
             this.greenChipLabel2.Name = "greenChipLabel2";
             this.greenChipLabel2.Size = new System.Drawing.Size(28, 29);
             this.greenChipLabel2.TabIndex = 36;
+            this.greenChipLabel2.Text = "2";
+            this.greenChipLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // greenChipLabel4
             // 
             this.greenChipLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.greenChipLabel4.ForeColor = System.Drawing.Color.Transparent;
+            this.greenChipLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.greenChipLabel4.ForeColor = System.Drawing.Color.Black;
             this.greenChipLabel4.Image = global::LudoClient.Properties.Resources.GreenChip;
             this.greenChipLabel4.Location = new System.Drawing.Point(464, 82);
             this.greenChipLabel4.Margin = new System.Windows.Forms.Padding(0);
             this.greenChipLabel4.Name = "greenChipLabel4";
             this.greenChipLabel4.Size = new System.Drawing.Size(28, 29);
             this.greenChipLabel4.TabIndex = 35;
+            this.greenChipLabel4.Text = "4";
+            this.greenChipLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // greenChipLabel1
             // 
             this.greenChipLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.greenChipLabel1.ForeColor = System.Drawing.Color.Transparent;
+            this.greenChipLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.greenChipLabel1.ForeColor = System.Drawing.Color.Black;
             this.greenChipLabel1.Image = global::LudoClient.Properties.Resources.GreenChip;
             this.greenChipLabel1.Location = new System.Drawing.Point(398, 82);
             this.greenChipLabel1.Margin = new System.Windows.Forms.Padding(0);
             this.greenChipLabel1.Name = "greenChipLabel1";
             this.greenChipLabel1.Size = new System.Drawing.Size(28, 29);
             this.greenChipLabel1.TabIndex = 34;
+            this.greenChipLabel1.Text = "1";
+            this.greenChipLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // redChipLabel2
             // 
             this.redChipLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.redChipLabel2.ForeColor = System.Drawing.Color.Transparent;
+            this.redChipLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.redChipLabel2.ForeColor = System.Drawing.Color.Black;
             this.redChipLabel2.Image = global::LudoClient.Properties.Resources.RedChip;
             this.redChipLabel2.Location = new System.Drawing.Point(96, 147);
             this.redChipLabel2.Margin = new System.Windows.Forms.Padding(0);
             this.redChipLabel2.Name = "redChipLabel2";
             this.redChipLabel2.Size = new System.Drawing.Size(28, 29);
             this.redChipLabel2.TabIndex = 33;
+            this.redChipLabel2.Text = "2";
+            this.redChipLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // redChipLabel4
             // 
             this.redChipLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.redChipLabel4.ForeColor = System.Drawing.Color.Transparent;
+            this.redChipLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.redChipLabel4.ForeColor = System.Drawing.Color.Black;
             this.redChipLabel4.Image = global::LudoClient.Properties.Resources.RedChip;
             this.redChipLabel4.Location = new System.Drawing.Point(158, 82);
             this.redChipLabel4.Margin = new System.Windows.Forms.Padding(0);
             this.redChipLabel4.Name = "redChipLabel4";
             this.redChipLabel4.Size = new System.Drawing.Size(28, 29);
             this.redChipLabel4.TabIndex = 32;
+            this.redChipLabel4.Text = "4";
+            this.redChipLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // redChipLabel3
             // 
             this.redChipLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.redChipLabel3.ForeColor = System.Drawing.Color.Transparent;
+            this.redChipLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.redChipLabel3.ForeColor = System.Drawing.Color.Black;
             this.redChipLabel3.Image = global::LudoClient.Properties.Resources.RedChip;
             this.redChipLabel3.Location = new System.Drawing.Point(158, 147);
             this.redChipLabel3.Margin = new System.Windows.Forms.Padding(0);
             this.redChipLabel3.Name = "redChipLabel3";
             this.redChipLabel3.Size = new System.Drawing.Size(28, 29);
             this.redChipLabel3.TabIndex = 31;
+            this.redChipLabel3.Text = "3";
+            this.redChipLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // redChipLabel1
             // 
             this.redChipLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.redChipLabel1.ForeColor = System.Drawing.Color.Transparent;
+            this.redChipLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.redChipLabel1.ForeColor = System.Drawing.Color.Black;
             this.redChipLabel1.Image = global::LudoClient.Properties.Resources.RedChip;
             this.redChipLabel1.Location = new System.Drawing.Point(96, 82);
             this.redChipLabel1.Margin = new System.Windows.Forms.Padding(0);
             this.redChipLabel1.Name = "redChipLabel1";
             this.redChipLabel1.Size = new System.Drawing.Size(28, 29);
             this.redChipLabel1.TabIndex = 30;
+            this.redChipLabel1.Text = "1";
+            this.redChipLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // blueChipLabel2
             // 
             this.blueChipLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.blueChipLabel2.ForeColor = System.Drawing.Color.Transparent;
+            this.blueChipLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blueChipLabel2.ForeColor = System.Drawing.Color.Black;
             this.blueChipLabel2.Image = ((System.Drawing.Image)(resources.GetObject("blueChipLabel2.Image")));
             this.blueChipLabel2.Location = new System.Drawing.Point(96, 457);
             this.blueChipLabel2.Margin = new System.Windows.Forms.Padding(0);
             this.blueChipLabel2.Name = "blueChipLabel2";
             this.blueChipLabel2.Size = new System.Drawing.Size(28, 29);
             this.blueChipLabel2.TabIndex = 29;
+            this.blueChipLabel2.Text = "2";
+            this.blueChipLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // blueChipLabel4
             // 
             this.blueChipLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.blueChipLabel4.ForeColor = System.Drawing.Color.Transparent;
+            this.blueChipLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blueChipLabel4.ForeColor = System.Drawing.Color.Black;
             this.blueChipLabel4.Image = ((System.Drawing.Image)(resources.GetObject("blueChipLabel4.Image")));
             this.blueChipLabel4.Location = new System.Drawing.Point(158, 391);
             this.blueChipLabel4.Margin = new System.Windows.Forms.Padding(0);
             this.blueChipLabel4.Name = "blueChipLabel4";
             this.blueChipLabel4.Size = new System.Drawing.Size(28, 29);
             this.blueChipLabel4.TabIndex = 28;
+            this.blueChipLabel4.Text = "4";
+            this.blueChipLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // blueChipLabel3
             // 
             this.blueChipLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.blueChipLabel3.ForeColor = System.Drawing.Color.Transparent;
+            this.blueChipLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blueChipLabel3.ForeColor = System.Drawing.Color.Black;
             this.blueChipLabel3.Image = ((System.Drawing.Image)(resources.GetObject("blueChipLabel3.Image")));
             this.blueChipLabel3.Location = new System.Drawing.Point(158, 457);
             this.blueChipLabel3.Margin = new System.Windows.Forms.Padding(0);
             this.blueChipLabel3.Name = "blueChipLabel3";
             this.blueChipLabel3.Size = new System.Drawing.Size(28, 29);
             this.blueChipLabel3.TabIndex = 27;
+            this.blueChipLabel3.Text = "3";
+            this.blueChipLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // blueChipLabel1
             // 
             this.blueChipLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.blueChipLabel1.ForeColor = System.Drawing.Color.Transparent;
+            this.blueChipLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blueChipLabel1.ForeColor = System.Drawing.Color.Black;
             this.blueChipLabel1.Image = ((System.Drawing.Image)(resources.GetObject("blueChipLabel1.Image")));
             this.blueChipLabel1.Location = new System.Drawing.Point(96, 391);
             this.blueChipLabel1.Margin = new System.Windows.Forms.Padding(0);
             this.blueChipLabel1.Name = "blueChipLabel1";
             this.blueChipLabel1.Size = new System.Drawing.Size(28, 29);
             this.blueChipLabel1.TabIndex = 26;
+            this.blueChipLabel1.Text = "1";
+            this.blueChipLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.blueChipLabel1.Click += new System.EventHandler(this.blueChipLabel_Click);
             // 
             // boardLabel
@@ -398,9 +446,9 @@
             this.label2.Location = new System.Drawing.Point(11, 598);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(327, 13);
+            this.label2.Size = new System.Drawing.Size(365, 13);
             this.label2.TabIndex = 29;
-            this.label2.Text = "Recuerde: El 1 y el 6 permiten desbloquear una ficha o volver a tirar";
+            this.label2.Text = "Recuerde: El 6 permite desbloquear una ficha o volver a tirar la ficha actual.";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // noteLabel
@@ -469,7 +517,7 @@
             // Board
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(977, 703);
+            this.ClientSize = new System.Drawing.Size(977, 706);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonChip4);
             this.Controls.Add(this.buttonChip3);
