@@ -102,7 +102,7 @@ namespace LudoClient.View
                 else
                     turn= "No";
 
-               MonitorBoardPlayer.Items.Add(player.Chip.Name + ": " + player.Name + " Turno Activo: " + turn.ToUpper());
+               MonitorBoardPlayer.Items.Add(player.Name + " Turno Activo: " + turn.ToUpper());
             }
         }
 
@@ -110,18 +110,60 @@ namespace LudoClient.View
         {
             foreach (Player player in _game.Players)
             {
-                if (player.Chip.Id == 1)
-                    player.Chip.AssignLabel(blueChipLabel);
-                else if (player.Chip.Id == 2)
-                    player.Chip.AssignLabel(blueChipLabel);
-                else if (player.Chip.Id == 3)
-                    player.Chip.AssignLabel(blueChipLabel);
-                else
-                    player.Chip.AssignLabel(blueChipLabel);
-
-                player.Chip.Image.Visible = true;
-                player.Chip.Image.Location = player.Chip.Coordinates[0];
+                AssignPlayerChip(player);
             }
+        }
+
+        private void AssignPlayerChip(Player player)
+        {
+            if (player.Color == ColorPlayer.AZUL)
+            {
+                AssignBlueChips(player);
+            }
+            else if (player.Color == ColorPlayer.ROJO)
+            {
+                AssignRedChips(player);
+            }
+            else if (player.Color == ColorPlayer.AMARILLO)
+            {
+                AssignYellowChips(player);
+            }
+            else
+            {
+                AssignGreenChips(player);
+            }
+        }
+
+        private void AssignBlueChips(Player player)
+        {
+            player.Chips[0].AssignLabel(blueChipLabel, player._startCoordinates[0]);
+            player.Chips[1].AssignLabel(blueChipLabel, player._startCoordinates[1]);
+            player.Chips[2].AssignLabel(blueChipLabel, player._startCoordinates[2]);
+            player.Chips[3].AssignLabel(blueChipLabel, player._startCoordinates[3]);
+        }
+
+        private void AssignGreenChips(Player player)
+        {
+            player.Chips[0].AssignLabel(blueChipLabel, player._startCoordinates[0]);
+            player.Chips[1].AssignLabel(blueChipLabel, player._startCoordinates[1]);
+            player.Chips[2].AssignLabel(blueChipLabel, player._startCoordinates[2]);
+            player.Chips[3].AssignLabel(blueChipLabel, player._startCoordinates[3]);
+        }
+
+        private void AssignRedChips(Player player)
+        {
+            player.Chips[0].AssignLabel(blueChipLabel, player._startCoordinates[0]);
+            player.Chips[1].AssignLabel(blueChipLabel, player._startCoordinates[1]);
+            player.Chips[2].AssignLabel(blueChipLabel, player._startCoordinates[2]);
+            player.Chips[3].AssignLabel(blueChipLabel, player._startCoordinates[3]);
+        }
+
+        private void AssignYellowChips(Player player)
+        {
+            player.Chips[0].AssignLabel(blueChipLabel, player._startCoordinates[0]);
+            player.Chips[1].AssignLabel(blueChipLabel, player._startCoordinates[1]);
+            player.Chips[2].AssignLabel(blueChipLabel, player._startCoordinates[2]);
+            player.Chips[3].AssignLabel(blueChipLabel, player._startCoordinates[3]);
         }
 
         public void LoadPrincipalPlayer()
@@ -131,7 +173,7 @@ namespace LudoClient.View
 
         public void ShowPrincipalPlayer()
         {
-            string message = "Jugador: " + principalPlayer.Name + " - Turno: " + principalPlayer.Turn.ToString() + " - Ficha: " + principalPlayer.Chip.Name.ToUpper();
+            string message = "Jugador: " + principalPlayer.Name + " - Turno: " + principalPlayer.Turn.ToString() + " - Color: " + principalPlayer.ColorToString().ToUpper();
             this.Text = message;
         }
 

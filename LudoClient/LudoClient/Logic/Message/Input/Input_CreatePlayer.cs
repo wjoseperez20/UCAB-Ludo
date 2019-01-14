@@ -18,7 +18,7 @@ namespace LudoClient.Logic.Message.Input
                 player.Id = message.PopInt();
                 player.Position = message.PopInt();
                 player.Turn_Active = message.PopBool();
-                game.AssignPlayerChip(player, message.PopInt());
+                game.AssignPlayerColor(player, message.PopInt());
                 player.PrincipalPlayer = true;
 
                 game.CountPlayers = message.PopInt();
@@ -33,7 +33,7 @@ namespace LudoClient.Logic.Message.Input
                     _assignPlayer.Position = message.PopInt();
                     _assignPlayer.Turn_Active = message.PopBool();
 
-                    game.AssignPlayerChip(_assignPlayer, message.PopInt());
+                    game.AssignPlayerColor(_assignPlayer, message.PopInt());
                     _assignPlayer.PrincipalPlayer = false;
 
                     game.Players.Add(_assignPlayer);

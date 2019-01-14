@@ -10,7 +10,11 @@ namespace LudoClient.Common.Entities
     public class Game
     {
         public List<Player> Players = new List<Player>();
-        public List<Chip> Chips = new List<Chip>();
+        public List<Chip> BlueChips = new List<Chip>();
+        public List<Chip> GreenChips = new List<Chip>();
+        public List<Chip> YellowChips = new List<Chip>();
+        public List<Chip> RedChips = new List<Chip>();
+
         private int _countPlayers;
         public bool StartedGame;
         private static Game _game;
@@ -100,53 +104,80 @@ namespace LudoClient.Common.Entities
             return Players.Find(x => x.Turn_Active);
         }
 
-        public void AssignPlayerChip(Player player, int idChip)
+        public void AssignPlayerColor(Player player, int color)
         {
-            if (idChip == 1)
+            if (color == 1)
             {
                 player._normalCoordinates = _normalCoordinatesBlue;
                 player._startCoordinates = _startCoordinatesBlue;
                 player._preHouseCoordinates = _preHouseCoordinatesBlue;
+                player.Chips = BlueChips;
+                player.Color = ColorPlayer.AZUL;
             }
-            if(idChip == 2)
+            else if (color == 2)
             {
                 player._normalCoordinates = _normalCoordinatesRed;
                 player._startCoordinates = _startCoordinatesRed;
                 player._preHouseCoordinates = _preHouseCoordinatesRed;
+                player.Chips = RedChips;
+                player.Color = ColorPlayer.ROJO;
             }
-            if (idChip == 3)
-            {
-                player._normalCoordinates = _normalCoordinatesYellow;
-                player._startCoordinates = _startCoordinatesYellow;
-                player._preHouseCoordinates = _preHouseCoordinatesYellow;
-            }
-            if (idChip == 4)
+            else if (color == 3)
             {
                 player._normalCoordinates = _normalCoordinatesGreen;
                 player._startCoordinates = _startCoordinatesGreen;
                 player._preHouseCoordinates = _preHouseCoordinatesGreen;
+                player.Chips = GreenChips;
+                player.Color = ColorPlayer.VERDE;
+            }
+            else if (color == 4)
+            {
+                player._normalCoordinates = _normalCoordinatesYellow;
+                player._startCoordinates = _startCoordinatesYellow;
+                player._preHouseCoordinates = _preHouseCoordinatesYellow;
+                player.Chips = YellowChips;
+                player.Color = ColorPlayer.AMARILLO;
+            }
+            else
+            {
+                //Color no definido.
             }
         }
 
         private void CreateChips()
         {
+
+            BlueChips = new List<Chip>();
+            RedChips = new List<Chip>();
+            GreenChips = new List<Chip>();
+            YellowChips = new List<Chip>();
+
             Chip chip;
 
-            chip = new Chip(1, "Rojo");
-            chip.AssingCoordinateChip(0,56,221);
-            Chips.Add(chip);
+            chip = new Chip(1, "Rojo 1");
+            chip = new Chip(2, "Rojo 2");
+            chip = new Chip(3, "Rojo 3");
+            chip = new Chip(4, "Rojo 4");
+            RedChips.Add(chip);
 
-            chip = new Chip(2, "Amarillo");
-            chip.AssingCoordinateChip(0, 462, 290);
-            Chips.Add(chip);
 
-            chip = new Chip(3, "Azul");
-            chip.AssingCoordinateChip(0, 226, 462);
-            Chips.Add(chip);
+            chip = new Chip(1, "Azul 1");
+            chip = new Chip(2, "Azul 2");
+            chip = new Chip(3, "Azul 3");
+            chip = new Chip(4, "Azul 4");
+            BlueChips.Add(chip);
 
-            chip = new Chip(4, "Verde");
-            chip.AssingCoordinateChip(0, 293, 49);
-            Chips.Add(chip);
+            chip = new Chip(1, "Verde 1");
+            chip = new Chip(2, "Verde 2");
+            chip = new Chip(3, "Verde 3");
+            chip = new Chip(4, "Verde 4");
+            GreenChips.Add(chip);
+
+            chip = new Chip(1, "Amarillo 1");
+            chip = new Chip(2, "Amarillo 2");
+            chip = new Chip(3, "Amarillo 3");
+            chip = new Chip(4, "Amarillo 4");
+            YellowChips.Add(chip);
 
         }
 

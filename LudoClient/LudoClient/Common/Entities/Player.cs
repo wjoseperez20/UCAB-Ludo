@@ -21,7 +21,7 @@ namespace LudoClient.Common.Entities
         private int _turn;
         private bool _principalPlayer;
         private TcpClient _client;
-        private Chip _chip;
+        private ColorPlayer _color;
         public Dictionary<int, Point> _normalCoordinates;
         public Dictionary<int, Point> _startCoordinates;
         public Dictionary<int, Point> _preHouseCoordinates;
@@ -35,7 +35,6 @@ namespace LudoClient.Common.Entities
             _password = password;
             _turn_active = false;
             _turn = 0;
-            _chip = null;
             Reading = new byte[512];
         }
 
@@ -86,12 +85,6 @@ namespace LudoClient.Common.Entities
             set { _turn = value; }
         }
 
-        public Chip Chip
-        {
-            get { return _chip; }
-            set { _chip = value; }
-        }
-
         public bool PrincipalPlayer
         {
             get { return this._principalPlayer; }
@@ -101,6 +94,29 @@ namespace LudoClient.Common.Entities
         public void ThrowDice()
         {
             SendMessage(new Output_ThrowDice(this));
+        }
+
+        public ColorPlayer Color
+        {
+            get { return this._color; }
+            set { this._color = value; }
+        }
+
+
+        public string ColorToString()
+        {
+            string retorno = "";
+
+            if (_color == ColorPlayer.AZUL)
+                retorno = "Azul";
+            else if (_color == ColorPlayer.ROJO)
+                retorno = "Rojo";
+            else if (_color == ColorPlayer.VERDE)
+                retorno = "Verde";
+            else
+                retorno = "Amarillo";
+
+            return retorno;
         }
 
         public void SendMessage(IMessageOutput IMessageOutput)

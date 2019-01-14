@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Entities\Chip.cs" />
+    <Compile Include="Common\Entities\ColorPlayer.cs" />
     <Compile Include="Common\Entities\Game.cs" />
     <Compile Include="Common\Entities\Player.cs" />
     <Compile Include="Common\Entities\Squares\House.cs" />

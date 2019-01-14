@@ -14,13 +14,13 @@ namespace LudoClient.Common.Entities
         private Label _image;
         private bool _assigned;
         private string _name;
-        private Dictionary<int, Point> _coordinates;
+        private int _casilla;
+
 
         public Chip(int id, string name)
         {
             _id = id;
             _name = name;
-            _coordinates = new Dictionary<int, Point>();
         }
 
         public int Id
@@ -44,20 +44,14 @@ namespace LudoClient.Common.Entities
             get { return _name; }
         }
 
-        public Dictionary<int, Point> Coordinates
-        {
-            get { return _coordinates; }
-            set { _coordinates = value; }
-        }
+        public int Casilla { get => _casilla; set => _casilla = value; }
 
-        public void AssingCoordinateChip(int Square, int x, int y)
-        {
-            _coordinates.Add(Square, new Point(x, y));
-        }
-
-        public void AssignLabel(Label label)
+        public void AssignLabel(Label label, Point startPoint)
         {
             _image = label;
+            _image.Visible = true;
+            _image.Location = startPoint;
+
         }
     }
 }

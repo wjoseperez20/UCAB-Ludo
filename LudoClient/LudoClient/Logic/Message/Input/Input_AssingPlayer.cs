@@ -30,7 +30,7 @@ namespace LudoClient.Logic.Message.Input
             _newPlayer.Id = idPlayer;
             _newPlayer.Position = message.PopInt();
             _newPlayer.Turn_Active = message.PopBool();
-            game.AssignPlayerChip(_newPlayer, message.PopInt());
+            game.AssignPlayerColor(_newPlayer, message.PopInt());
             _newPlayer.PrincipalPlayer = false;
 
             game.Players.Add(_newPlayer);
