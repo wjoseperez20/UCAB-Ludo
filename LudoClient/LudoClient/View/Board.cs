@@ -132,15 +132,20 @@ namespace LudoClient.View
 
             if (principalPlayer.Turn_Active)
             {
-                throwDiceButton.Enabled = true;
+                throwDiceButton.Invoke(new Action<bool>(InvokeDiceButton), true);
                 ShowInformation("¡ES TU TURNO!");
             }
             else
             {
-                throwDiceButton.Enabled = false;
+                throwDiceButton.Invoke(new Action<bool>(InvokeDiceButton), false);
                 ShowInformation("Es el turno del jugador: " + _game.GetActiveTurnPlayer().Name);
             }
 
+        }
+
+        private void InvokeDiceButton(bool enable)
+        {
+            throwDiceButton.Enabled = enable;
         }
 
         private void ShowPlayers()
@@ -325,6 +330,13 @@ namespace LudoClient.View
             Chip chip = principalPlayer.Chips.Find(c => c.Id == idChip);
 
             chip.Image.Invoke(new Action<Player, Label, int>(InvokeMoveChip), principalPlayer, chip.Image, newPosition);
+        }
+
+        public void MoveChipRemotePlayer(Player player, int idChip, int newPosition)
+        {
+            Chip chip = player.Chips.Find(c => c.Id == idChip);
+
+            chip.Image.Invoke(new Action<Player, Label, int>(InvokeMoveChip), player, chip.Image, newPosition);
         }
 
         private void InvokeMoveChip(Player player, Label chip, int Position)

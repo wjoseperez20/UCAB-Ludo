@@ -16,10 +16,17 @@ namespace LudoClient.Logic.Message.Input
     {
         public void Execute(PackageServer message, Player player, Game game, ViewsController viewsController)
         {
+            int idPlayer = message.PopInt();
             int idChip = message.PopInt();
             int newPositionChip = message.PopInt();
+            int idPlayerTurnActive = message.PopInt();
 
-            viewsController.MoveChip(newPositionChip, idChip);
+            Game.GetGame.Players.Find(j => j.Turn_Active).Turn_Active = false;
+
+            Game.GetGame.Players.Find(j => j.Id == idPlayerTurnActive).Turn_Active = true;
+
+            viewsController.MoveChip(idPlayer, newPositionChip, idChip);
+            viewsController.UpdateTurning();
 
 
             

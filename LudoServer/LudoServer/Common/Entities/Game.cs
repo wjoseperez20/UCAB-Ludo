@@ -107,7 +107,7 @@ namespace LudoServer.Common.Entities
 
             ManageTurn();
 
-            player.SendMessage(new Output_MoveChip(player, chipToMove));
+            SendBroadCastMessage(new Output_MoveChip(player, chipToMove));
 
 
 

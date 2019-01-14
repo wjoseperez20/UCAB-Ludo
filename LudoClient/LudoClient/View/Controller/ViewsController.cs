@@ -73,9 +73,14 @@ namespace LudoClient.View.Controller
             _board.CloseWindow();
         }
 
-        public void MoveChip(int position, int idChip)
+        public void MoveChip(int idPlayer, int position, int idChip)
         {
-            _board.MoveChipPrincipalPlayer(idChip, position);
+            Player player = Game.GetGame.Players.Find(p => p.Id == idPlayer);
+
+            if(player.PrincipalPlayer)
+                _board.MoveChipPrincipalPlayer(idChip, position);
+            else
+                _board.MoveChipRemotePlayer(player, idChip, position);
         }
 
     }
