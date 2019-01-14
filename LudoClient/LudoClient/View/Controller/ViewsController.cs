@@ -73,6 +73,10 @@ namespace LudoClient.View.Controller
             _board.CloseWindow();
         }
 
+        public void showDiceResult(int diceResult) {
+            _board.ShowResultDice(diceResult);
+        }
+
         public void MoveChip(int idPlayer, int position, int idChip)
         {
             Player player = Game.GetGame.Players.Find(p => p.Id == idPlayer);

@@ -64,6 +64,7 @@
             this.buttonChip3 = new System.Windows.Forms.Button();
             this.buttonChip4 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.labelResultDice = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
@@ -514,10 +515,21 @@
             this.label4.Text = "Resultado:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // labelResultDice
+            // 
+            this.labelResultDice.AutoSize = true;
+            this.labelResultDice.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelResultDice.Location = new System.Drawing.Point(857, 32);
+            this.labelResultDice.Name = "labelResultDice";
+            this.labelResultDice.Size = new System.Drawing.Size(0, 37);
+            this.labelResultDice.TabIndex = 35;
+            this.labelResultDice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Board
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(977, 706);
+            this.Controls.Add(this.labelResultDice);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonChip4);
             this.Controls.Add(this.buttonChip3);
@@ -584,5 +596,6 @@
         private System.Windows.Forms.Label yellowChipLabel4;
         private System.Windows.Forms.Label yellowChipLabel3;
         private System.Windows.Forms.Label yellowChipLabel1;
+        private System.Windows.Forms.Label labelResultDice;
     }
 }

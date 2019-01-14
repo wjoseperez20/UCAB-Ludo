@@ -19,7 +19,7 @@ namespace LudoClient.Logic.Message.Input
             int resultDice = message.PopInt();
             bool throwAgain = message.PopBool();
 
-            MessageBox.Show("Saque:" + resultDice+" - Again:"+throwAgain.ToString());            
+            viewsController.showDiceResult(resultDice);
 
         }
     }

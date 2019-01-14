@@ -40,6 +40,11 @@ namespace LudoClient.View
             yellowChipLabel2.Visible = false;
             yellowChipLabel3.Visible = false;
             yellowChipLabel4.Visible = false;
+
+            buttonChip1.Enabled = false;
+            buttonChip2.Enabled = false;
+            buttonChip3.Enabled = false;
+            buttonChip4.Enabled = false;
         }
 
         public static Board GetBoard
@@ -267,6 +272,7 @@ namespace LudoClient.View
         private void throwDiceButton_Click(object sender, EventArgs e)
         {
             principalPlayer.ThrowDiceChip();
+            throwDiceButton.Enabled = false;
         }
 
         private void blueChipLabel_Click(object sender, EventArgs e)
@@ -289,6 +295,20 @@ namespace LudoClient.View
 
         }
 
+        public void ShowResultDice(int resultDice)
+        {
+            labelResultDice.Invoke(new Action<int>(InvokeShowResultDice), resultDice);
+        }
+
+        private void InvokeShowResultDice(int resultDice)
+        {
+            buttonChip1.Enabled = true;
+            buttonChip2.Enabled = true;
+            buttonChip3.Enabled = true;
+            buttonChip4.Enabled = true;
+            labelResultDice.Text = resultDice.ToString();
+        }
+
         private void powerOffButton_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("¿Estás seguro que deseas cerrar el juego?", "¡Atención!",
@@ -297,7 +317,7 @@ namespace LudoClient.View
             if (result == DialogResult.Yes)
             {
                 MessageBox.Show("¡Cobarde! Que mal perdedor", ">:(", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                System.Environment.Exit(1);
+                System.Environment.Exit(0);
             }
             else
             {
@@ -308,21 +328,32 @@ namespace LudoClient.View
         private void buttonChip1_Click(object sender, EventArgs e)
         {
             principalPlayer.MoveChip(1);
+            disabledAllButton();
         }
 
         private void buttonChip2_Click(object sender, EventArgs e)
         {
             principalPlayer.MoveChip(2);
+            disabledAllButton();
         }
 
         private void buttonChip3_Click(object sender, EventArgs e)
         {
             principalPlayer.MoveChip(3);
+            disabledAllButton();
         }
 
         private void buttonChip4_Click(object sender, EventArgs e)
         {
             principalPlayer.MoveChip(4);
+            disabledAllButton();
+        }
+
+        private void disabledAllButton() {
+            buttonChip1.Enabled = false;
+            buttonChip2.Enabled = false;
+            buttonChip3.Enabled = false;
+            buttonChip4.Enabled = false;
         }
 
         public void MoveChipPrincipalPlayer(int idChip, int newPosition)
