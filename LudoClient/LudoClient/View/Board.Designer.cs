@@ -35,7 +35,7 @@
             this.MonitorBoardPlayer = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.blueChipLabel = new System.Windows.Forms.Label();
+            this.blueChipLabel1 = new System.Windows.Forms.Label();
             this.boardLabel = new System.Windows.Forms.Label();
             this.powerOffButton = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -49,6 +49,21 @@
             this.buttonChip3 = new System.Windows.Forms.Button();
             this.buttonChip4 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.blueChipLabel3 = new System.Windows.Forms.Label();
+            this.blueChipLabel4 = new System.Windows.Forms.Label();
+            this.blueChipLabel2 = new System.Windows.Forms.Label();
+            this.redChipLabel1 = new System.Windows.Forms.Label();
+            this.redChipLabel3 = new System.Windows.Forms.Label();
+            this.redChipLabel4 = new System.Windows.Forms.Label();
+            this.redChipLabel2 = new System.Windows.Forms.Label();
+            this.greenChipLabel1 = new System.Windows.Forms.Label();
+            this.greenChipLabel4 = new System.Windows.Forms.Label();
+            this.greenChipLabel2 = new System.Windows.Forms.Label();
+            this.greenChipLabel3 = new System.Windows.Forms.Label();
+            this.yellowChipLabel1 = new System.Windows.Forms.Label();
+            this.yellowChipLabel3 = new System.Windows.Forms.Label();
+            this.yellowChipLabel4 = new System.Windows.Forms.Label();
+            this.yellowChipLabel2 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
@@ -112,24 +127,39 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.blueChipLabel);
+            this.panel3.Controls.Add(this.yellowChipLabel2);
+            this.panel3.Controls.Add(this.yellowChipLabel4);
+            this.panel3.Controls.Add(this.yellowChipLabel3);
+            this.panel3.Controls.Add(this.yellowChipLabel1);
+            this.panel3.Controls.Add(this.greenChipLabel3);
+            this.panel3.Controls.Add(this.greenChipLabel2);
+            this.panel3.Controls.Add(this.greenChipLabel4);
+            this.panel3.Controls.Add(this.greenChipLabel1);
+            this.panel3.Controls.Add(this.redChipLabel2);
+            this.panel3.Controls.Add(this.redChipLabel4);
+            this.panel3.Controls.Add(this.redChipLabel3);
+            this.panel3.Controls.Add(this.redChipLabel1);
+            this.panel3.Controls.Add(this.blueChipLabel2);
+            this.panel3.Controls.Add(this.blueChipLabel4);
+            this.panel3.Controls.Add(this.blueChipLabel3);
+            this.panel3.Controls.Add(this.blueChipLabel1);
             this.panel3.Controls.Add(this.boardLabel);
             this.panel3.Location = new System.Drawing.Point(10, 11);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(595, 564);
             this.panel3.TabIndex = 25;
             // 
-            // blueChipLabel
+            // blueChipLabel1
             // 
-            this.blueChipLabel.BackColor = System.Drawing.Color.Transparent;
-            this.blueChipLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.blueChipLabel.Image = ((System.Drawing.Image)(resources.GetObject("blueChipLabel.Image")));
-            this.blueChipLabel.Location = new System.Drawing.Point(226, 394);
-            this.blueChipLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.blueChipLabel.Name = "blueChipLabel";
-            this.blueChipLabel.Size = new System.Drawing.Size(28, 29);
-            this.blueChipLabel.TabIndex = 26;
-            this.blueChipLabel.Click += new System.EventHandler(this.blueChipLabel_Click);
+            this.blueChipLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.blueChipLabel1.ForeColor = System.Drawing.Color.Transparent;
+            this.blueChipLabel1.Image = ((System.Drawing.Image)(resources.GetObject("blueChipLabel1.Image")));
+            this.blueChipLabel1.Location = new System.Drawing.Point(96, 391);
+            this.blueChipLabel1.Margin = new System.Windows.Forms.Padding(0);
+            this.blueChipLabel1.Name = "blueChipLabel1";
+            this.blueChipLabel1.Size = new System.Drawing.Size(28, 29);
+            this.blueChipLabel1.TabIndex = 26;
+            this.blueChipLabel1.Click += new System.EventHandler(this.blueChipLabel_Click);
             // 
             // boardLabel
             // 
@@ -267,6 +297,171 @@
             this.label4.Text = "Resultado:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // blueChipLabel3
+            // 
+            this.blueChipLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.blueChipLabel3.ForeColor = System.Drawing.Color.Transparent;
+            this.blueChipLabel3.Image = ((System.Drawing.Image)(resources.GetObject("blueChipLabel3.Image")));
+            this.blueChipLabel3.Location = new System.Drawing.Point(158, 457);
+            this.blueChipLabel3.Margin = new System.Windows.Forms.Padding(0);
+            this.blueChipLabel3.Name = "blueChipLabel3";
+            this.blueChipLabel3.Size = new System.Drawing.Size(28, 29);
+            this.blueChipLabel3.TabIndex = 27;
+            // 
+            // blueChipLabel4
+            // 
+            this.blueChipLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.blueChipLabel4.ForeColor = System.Drawing.Color.Transparent;
+            this.blueChipLabel4.Image = ((System.Drawing.Image)(resources.GetObject("blueChipLabel4.Image")));
+            this.blueChipLabel4.Location = new System.Drawing.Point(158, 391);
+            this.blueChipLabel4.Margin = new System.Windows.Forms.Padding(0);
+            this.blueChipLabel4.Name = "blueChipLabel4";
+            this.blueChipLabel4.Size = new System.Drawing.Size(28, 29);
+            this.blueChipLabel4.TabIndex = 28;
+            // 
+            // blueChipLabel2
+            // 
+            this.blueChipLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.blueChipLabel2.ForeColor = System.Drawing.Color.Transparent;
+            this.blueChipLabel2.Image = ((System.Drawing.Image)(resources.GetObject("blueChipLabel2.Image")));
+            this.blueChipLabel2.Location = new System.Drawing.Point(96, 457);
+            this.blueChipLabel2.Margin = new System.Windows.Forms.Padding(0);
+            this.blueChipLabel2.Name = "blueChipLabel2";
+            this.blueChipLabel2.Size = new System.Drawing.Size(28, 29);
+            this.blueChipLabel2.TabIndex = 29;
+            // 
+            // redChipLabel1
+            // 
+            this.redChipLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.redChipLabel1.ForeColor = System.Drawing.Color.Transparent;
+            this.redChipLabel1.Image = global::LudoClient.Properties.Resources.RedChip;
+            this.redChipLabel1.Location = new System.Drawing.Point(96, 82);
+            this.redChipLabel1.Margin = new System.Windows.Forms.Padding(0);
+            this.redChipLabel1.Name = "redChipLabel1";
+            this.redChipLabel1.Size = new System.Drawing.Size(28, 29);
+            this.redChipLabel1.TabIndex = 30;
+            // 
+            // redChipLabel3
+            // 
+            this.redChipLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.redChipLabel3.ForeColor = System.Drawing.Color.Transparent;
+            this.redChipLabel3.Image = global::LudoClient.Properties.Resources.RedChip;
+            this.redChipLabel3.Location = new System.Drawing.Point(158, 147);
+            this.redChipLabel3.Margin = new System.Windows.Forms.Padding(0);
+            this.redChipLabel3.Name = "redChipLabel3";
+            this.redChipLabel3.Size = new System.Drawing.Size(28, 29);
+            this.redChipLabel3.TabIndex = 31;
+            // 
+            // redChipLabel4
+            // 
+            this.redChipLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.redChipLabel4.ForeColor = System.Drawing.Color.Transparent;
+            this.redChipLabel4.Image = global::LudoClient.Properties.Resources.RedChip;
+            this.redChipLabel4.Location = new System.Drawing.Point(158, 82);
+            this.redChipLabel4.Margin = new System.Windows.Forms.Padding(0);
+            this.redChipLabel4.Name = "redChipLabel4";
+            this.redChipLabel4.Size = new System.Drawing.Size(28, 29);
+            this.redChipLabel4.TabIndex = 32;
+            // 
+            // redChipLabel2
+            // 
+            this.redChipLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.redChipLabel2.ForeColor = System.Drawing.Color.Transparent;
+            this.redChipLabel2.Image = global::LudoClient.Properties.Resources.RedChip;
+            this.redChipLabel2.Location = new System.Drawing.Point(96, 147);
+            this.redChipLabel2.Margin = new System.Windows.Forms.Padding(0);
+            this.redChipLabel2.Name = "redChipLabel2";
+            this.redChipLabel2.Size = new System.Drawing.Size(28, 29);
+            this.redChipLabel2.TabIndex = 33;
+            // 
+            // greenChipLabel1
+            // 
+            this.greenChipLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.greenChipLabel1.ForeColor = System.Drawing.Color.Transparent;
+            this.greenChipLabel1.Image = global::LudoClient.Properties.Resources.GreenChip;
+            this.greenChipLabel1.Location = new System.Drawing.Point(398, 82);
+            this.greenChipLabel1.Margin = new System.Windows.Forms.Padding(0);
+            this.greenChipLabel1.Name = "greenChipLabel1";
+            this.greenChipLabel1.Size = new System.Drawing.Size(28, 29);
+            this.greenChipLabel1.TabIndex = 34;
+            // 
+            // greenChipLabel4
+            // 
+            this.greenChipLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.greenChipLabel4.ForeColor = System.Drawing.Color.Transparent;
+            this.greenChipLabel4.Image = global::LudoClient.Properties.Resources.GreenChip;
+            this.greenChipLabel4.Location = new System.Drawing.Point(464, 82);
+            this.greenChipLabel4.Margin = new System.Windows.Forms.Padding(0);
+            this.greenChipLabel4.Name = "greenChipLabel4";
+            this.greenChipLabel4.Size = new System.Drawing.Size(28, 29);
+            this.greenChipLabel4.TabIndex = 35;
+            // 
+            // greenChipLabel2
+            // 
+            this.greenChipLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.greenChipLabel2.ForeColor = System.Drawing.Color.Transparent;
+            this.greenChipLabel2.Image = global::LudoClient.Properties.Resources.GreenChip;
+            this.greenChipLabel2.Location = new System.Drawing.Point(398, 147);
+            this.greenChipLabel2.Margin = new System.Windows.Forms.Padding(0);
+            this.greenChipLabel2.Name = "greenChipLabel2";
+            this.greenChipLabel2.Size = new System.Drawing.Size(28, 29);
+            this.greenChipLabel2.TabIndex = 36;
+            // 
+            // greenChipLabel3
+            // 
+            this.greenChipLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.greenChipLabel3.ForeColor = System.Drawing.Color.Transparent;
+            this.greenChipLabel3.Image = global::LudoClient.Properties.Resources.GreenChip;
+            this.greenChipLabel3.Location = new System.Drawing.Point(464, 147);
+            this.greenChipLabel3.Margin = new System.Windows.Forms.Padding(0);
+            this.greenChipLabel3.Name = "greenChipLabel3";
+            this.greenChipLabel3.Size = new System.Drawing.Size(28, 29);
+            this.greenChipLabel3.TabIndex = 37;
+            // 
+            // yellowChipLabel1
+            // 
+            this.yellowChipLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.yellowChipLabel1.ForeColor = System.Drawing.Color.Transparent;
+            this.yellowChipLabel1.Image = global::LudoClient.Properties.Resources.YellowChip;
+            this.yellowChipLabel1.Location = new System.Drawing.Point(398, 391);
+            this.yellowChipLabel1.Margin = new System.Windows.Forms.Padding(0);
+            this.yellowChipLabel1.Name = "yellowChipLabel1";
+            this.yellowChipLabel1.Size = new System.Drawing.Size(28, 29);
+            this.yellowChipLabel1.TabIndex = 38;
+            // 
+            // yellowChipLabel3
+            // 
+            this.yellowChipLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.yellowChipLabel3.ForeColor = System.Drawing.Color.Transparent;
+            this.yellowChipLabel3.Image = global::LudoClient.Properties.Resources.YellowChip;
+            this.yellowChipLabel3.Location = new System.Drawing.Point(464, 457);
+            this.yellowChipLabel3.Margin = new System.Windows.Forms.Padding(0);
+            this.yellowChipLabel3.Name = "yellowChipLabel3";
+            this.yellowChipLabel3.Size = new System.Drawing.Size(28, 29);
+            this.yellowChipLabel3.TabIndex = 39;
+            // 
+            // yellowChipLabel4
+            // 
+            this.yellowChipLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.yellowChipLabel4.ForeColor = System.Drawing.Color.Transparent;
+            this.yellowChipLabel4.Image = global::LudoClient.Properties.Resources.YellowChip;
+            this.yellowChipLabel4.Location = new System.Drawing.Point(464, 391);
+            this.yellowChipLabel4.Margin = new System.Windows.Forms.Padding(0);
+            this.yellowChipLabel4.Name = "yellowChipLabel4";
+            this.yellowChipLabel4.Size = new System.Drawing.Size(28, 29);
+            this.yellowChipLabel4.TabIndex = 40;
+            // 
+            // yellowChipLabel2
+            // 
+            this.yellowChipLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.yellowChipLabel2.ForeColor = System.Drawing.Color.Transparent;
+            this.yellowChipLabel2.Image = global::LudoClient.Properties.Resources.YellowChip;
+            this.yellowChipLabel2.Location = new System.Drawing.Point(398, 457);
+            this.yellowChipLabel2.Margin = new System.Windows.Forms.Padding(0);
+            this.yellowChipLabel2.Name = "yellowChipLabel2";
+            this.yellowChipLabel2.Size = new System.Drawing.Size(28, 29);
+            this.yellowChipLabel2.TabIndex = 41;
+            // 
             // Board
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -308,7 +503,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button powerOffButton;
         private System.Windows.Forms.Label boardLabel;
-        private System.Windows.Forms.Label blueChipLabel;
+        private System.Windows.Forms.Label blueChipLabel1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label selloUcabLabel;
         private System.Windows.Forms.Label eyesLabel;
@@ -320,5 +515,20 @@
         private System.Windows.Forms.Button buttonChip3;
         private System.Windows.Forms.Button buttonChip4;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label blueChipLabel2;
+        private System.Windows.Forms.Label blueChipLabel4;
+        private System.Windows.Forms.Label blueChipLabel3;
+        private System.Windows.Forms.Label redChipLabel1;
+        private System.Windows.Forms.Label greenChipLabel3;
+        private System.Windows.Forms.Label greenChipLabel2;
+        private System.Windows.Forms.Label greenChipLabel4;
+        private System.Windows.Forms.Label greenChipLabel1;
+        private System.Windows.Forms.Label redChipLabel2;
+        private System.Windows.Forms.Label redChipLabel4;
+        private System.Windows.Forms.Label redChipLabel3;
+        private System.Windows.Forms.Label yellowChipLabel2;
+        private System.Windows.Forms.Label yellowChipLabel4;
+        private System.Windows.Forms.Label yellowChipLabel3;
+        private System.Windows.Forms.Label yellowChipLabel1;
     }
 }
