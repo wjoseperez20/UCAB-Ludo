@@ -91,18 +91,30 @@ namespace LudoServer.Common.Entities
             }
         }
 
-        public void ManagePlayPlayer(Player player)
+        public void ThrowDicePlayer(Player player)
         {
             player.Play();
 
-            int SquareId = player.Position;
+            player.SendMessage(new Output_ThrowDice(player));
+        }
 
-            Square _square = Squares.Find(c => c.Position == SquareId);
+        public void ManagePlayChip(Player player, int idChip)
+        {
+
+            Chip chipToMove = player.chips.Find(c => c.Id == idChip);
+
+            chipToMove.CalculatePosition(player.ResultDice);
+
+            player.SendMessage(new Output_MoveChip(player, chipToMove));
+
+
+
+            /*Square _square = Squares.Find(c => c.Position == SquareId);
 
             if (_square == null)
                 return;
 
-            _square.ExecuteEffect(player);
+            _square.ExecuteEffect(player);*/
         }
 
 
@@ -113,6 +125,11 @@ namespace LudoServer.Common.Entities
 
             player.Chip = _game.Chips.Find(f => !f.Assigned);
             player.Chip.Assigned = true;
+
+            player.chips.Add(new Chip(1));
+            player.chips.Add(new Chip(2));
+            player.chips.Add(new Chip(3));
+            player.chips.Add(new Chip(4));
         }
 
         public void AssignTurnPlayer()

@@ -12,18 +12,19 @@ using LudoServer.View;
 
 namespace LudoServer.Logic.Message.Input
 {
-    public class Input_ThrowDice : IMessageInput
+    public class Input_MoveChip : IMessageInput
     {
         public void Execute(PackageClient message, Player player, Game game, ServerView serverView)
         {
             int idPlayer = message.PopInt();
+            int idChip = message.PopInt();
 
             Player _player = game.GetPlayerById(idPlayer);
 
             if (_player == null)
                 return;
 
-            game.ThrowDicePlayer(_player);
+            game.ManagePlayChip(_player, idChip);
         }
     }
 }

@@ -10,5 +10,6 @@ namespace LudoClient.Logic.Message.Core.Constants
     {
         public const int Output_Create_Player = 1;
         public const int Output_Throw_Dice = 2;
+        public const int Output_Move_Chip = 3;
     }
 }

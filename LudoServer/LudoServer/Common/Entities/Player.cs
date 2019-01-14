@@ -19,6 +19,8 @@ namespace LudoServer.Common.Entities
         private int _position;
         private bool _turn_active;
         private int _turn;
+        public List<Chip> chips;
+        private int _resultDice;
         private TcpClient _client;
         private Chip _chip;
         public byte[] Reading;
@@ -30,6 +32,8 @@ namespace LudoServer.Common.Entities
             this._turn_active = false;
             _turn = 0;
             _chip = null;
+            chips = new List<Chip>();
+
         }
 
         public int Id
@@ -92,30 +96,17 @@ namespace LudoServer.Common.Entities
             set { _chip = value; }
         }
 
+        public int ResultDice { get => _resultDice; set => _resultDice = value; }
+
         public void Play()
         {
             if (!this._turn_active)
                 return;
 
-            int result_dice = Dice.throwDice();
+            _resultDice = Dice.throwDice();
 
-            CalculatePosition(result_dice);
-            
-        }
+            //CalculatePosition(result_dice);
 
-        private void CalculatePosition(int result_dice)
-        {
-            int positionBoard = this._position + result_dice;
-
-            if (positionBoard > 53)
-            {
-                this._position = positionBoard - 54;
-                //house
-            }
-            else
-            {
-                this._position = positionBoard;
-            }
         }
 
         public void SendMessage(IMessageOutput IMessageOutput)

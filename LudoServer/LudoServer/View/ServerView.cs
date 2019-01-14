@@ -22,11 +22,12 @@ namespace LudoServer.View
             MonitorListRegisteredPlayers();
             powerOffButton.Enabled = false;
             startGameButton.Enabled = false;
+            comboCountPlayer.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!Connection.Create_Connection(this, 2, Game.GetGame))
+            if (!Connection.Create_Connection(this, Convert.ToInt32(comboCountPlayer.SelectedItem), Game.GetGame))
                 MessageBox.Show("Ingresa una dirección IP valida");
             else
             {

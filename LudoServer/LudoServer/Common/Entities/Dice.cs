@@ -36,7 +36,7 @@ namespace LudoServer.Common.Entities
         {
             DiceGame = rand.Next(1, 7);
            
-            if (DiceGame == 7)
+            if (DiceGame == 6)
                 ThrowAgain = true;
             else
                 ThrowAgain = false;

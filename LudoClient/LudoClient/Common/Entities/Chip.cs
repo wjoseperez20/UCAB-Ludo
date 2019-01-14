@@ -14,7 +14,7 @@ namespace LudoClient.Common.Entities
         private Label _image;
         private bool _assigned;
         private string _name;
-        private int _casilla;
+        private int _position;
 
 
         public Chip(int id, string name)
@@ -44,7 +44,7 @@ namespace LudoClient.Common.Entities
             get { return _name; }
         }
 
-        public int Casilla { get => _casilla; set => _casilla = value; }
+        public int Position { get => _position; set => _position = value; }
 
         public void AssignLabel(Label label, Point startPoint)
         {

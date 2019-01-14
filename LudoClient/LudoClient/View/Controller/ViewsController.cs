@@ -73,6 +73,10 @@ namespace LudoClient.View.Controller
             _board.CloseWindow();
         }
 
+        public void MoveChip(int position, int idChip)
+        {
+            _board.MoveChipPrincipalPlayer(idChip, position);
+        }
 
     }
 }

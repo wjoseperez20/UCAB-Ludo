@@ -16,9 +16,10 @@ namespace LudoClient.Common.Entities
         private int _id;
         private string _name;
         private string _password;
-        private int _position;
+        private int _resultDice;
         private bool _turn_active;
         private int _turn;
+        public int Position;
         private bool _principalPlayer;
         private TcpClient _client;
         private ColorPlayer _color;
@@ -56,10 +57,10 @@ namespace LudoClient.Common.Entities
             get { return this._name; }
         }
 
-        public int Position
+        public int ResultDice
         {
-            get { return this._position; }
-            set { this._position = value; }
+            get { return this._resultDice; }
+            set { this._resultDice = value; }
         }
 
         public bool Turn_Active
@@ -91,9 +92,15 @@ namespace LudoClient.Common.Entities
             set { this._principalPlayer = value; }
         }
 
-        public void ThrowDice()
+        public void ThrowDiceChip()
         {
             SendMessage(new Output_ThrowDice(this));
+        }
+
+        public void MoveChip(int idChip)
+        {
+            SendMessage(new Output_MoveChip(this, idChip));
+
         }
 
         public ColorPlayer Color

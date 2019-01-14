@@ -15,5 +15,7 @@ namespace LudoClient.Logic.Message.Core.Constants
         public const int Input_Delete_Player = 5;
         public const int Input_Start_Game = 6;
         public const int Input_Assing_Player = 7;
+        public const int Input_Throw_Dice = 8;
+        public const int Input_Move_Chip = 9;
     }
 }

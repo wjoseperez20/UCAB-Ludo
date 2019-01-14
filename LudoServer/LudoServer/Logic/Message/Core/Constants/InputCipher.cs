@@ -10,5 +10,6 @@ namespace LudoServer.Logic.Message.Core.Constants
     {
         public const int Input_Login = 1;
         public const int Input_Throw_Dice = 2;
+        public const int Input_Move_Chip = 3;
     }
 }
