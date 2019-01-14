@@ -136,34 +136,34 @@ namespace LudoClient.View
 
         private void AssignBlueChips(Player player)
         {
-            player.Chips[0].AssignLabel(blueChipLabel, player._startCoordinates[0]);
-            player.Chips[1].AssignLabel(blueChipLabel, player._startCoordinates[1]);
-            player.Chips[2].AssignLabel(blueChipLabel, player._startCoordinates[2]);
-            player.Chips[3].AssignLabel(blueChipLabel, player._startCoordinates[3]);
+            player.Chips[0].AssignLabel(blueChipLabel, player._startCoordinates[1]);
+            player.Chips[1].AssignLabel(blueChipLabel, player._startCoordinates[2]);
+            player.Chips[2].AssignLabel(blueChipLabel, player._startCoordinates[3]);
+            player.Chips[3].AssignLabel(blueChipLabel, player._startCoordinates[4]);
         }
 
         private void AssignGreenChips(Player player)
         {
-            player.Chips[0].AssignLabel(blueChipLabel, player._startCoordinates[0]);
-            player.Chips[1].AssignLabel(blueChipLabel, player._startCoordinates[1]);
-            player.Chips[2].AssignLabel(blueChipLabel, player._startCoordinates[2]);
-            player.Chips[3].AssignLabel(blueChipLabel, player._startCoordinates[3]);
+            player.Chips[0].AssignLabel(blueChipLabel, player._startCoordinates[1]);
+            player.Chips[1].AssignLabel(blueChipLabel, player._startCoordinates[2]);
+            player.Chips[2].AssignLabel(blueChipLabel, player._startCoordinates[3]);
+            player.Chips[3].AssignLabel(blueChipLabel, player._startCoordinates[4]);
         }
 
         private void AssignRedChips(Player player)
         {
-            player.Chips[0].AssignLabel(blueChipLabel, player._startCoordinates[0]);
-            player.Chips[1].AssignLabel(blueChipLabel, player._startCoordinates[1]);
-            player.Chips[2].AssignLabel(blueChipLabel, player._startCoordinates[2]);
-            player.Chips[3].AssignLabel(blueChipLabel, player._startCoordinates[3]);
+            player.Chips[0].AssignLabel(blueChipLabel, player._startCoordinates[1]);
+            player.Chips[1].AssignLabel(blueChipLabel, player._startCoordinates[2]);
+            player.Chips[2].AssignLabel(blueChipLabel, player._startCoordinates[3]);
+            player.Chips[3].AssignLabel(blueChipLabel, player._startCoordinates[4]);
         }
 
         private void AssignYellowChips(Player player)
         {
-            player.Chips[0].AssignLabel(blueChipLabel, player._startCoordinates[0]);
-            player.Chips[1].AssignLabel(blueChipLabel, player._startCoordinates[1]);
-            player.Chips[2].AssignLabel(blueChipLabel, player._startCoordinates[2]);
-            player.Chips[3].AssignLabel(blueChipLabel, player._startCoordinates[3]);
+            player.Chips[0].AssignLabel(blueChipLabel, player._startCoordinates[1]);
+            player.Chips[1].AssignLabel(blueChipLabel, player._startCoordinates[2]);
+            player.Chips[2].AssignLabel(blueChipLabel, player._startCoordinates[3]);
+            player.Chips[3].AssignLabel(blueChipLabel, player._startCoordinates[4]);
         }
 
         public void LoadPrincipalPlayer()

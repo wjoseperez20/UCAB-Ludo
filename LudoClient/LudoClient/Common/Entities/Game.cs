@@ -155,27 +155,39 @@ namespace LudoClient.Common.Entities
             Chip chip;
 
             chip = new Chip(1, "Rojo 1");
+            RedChips.Add(chip);
             chip = new Chip(2, "Rojo 2");
+            RedChips.Add(chip);
             chip = new Chip(3, "Rojo 3");
+            RedChips.Add(chip);
             chip = new Chip(4, "Rojo 4");
             RedChips.Add(chip);
 
 
             chip = new Chip(1, "Azul 1");
+            BlueChips.Add(chip);
             chip = new Chip(2, "Azul 2");
+            BlueChips.Add(chip);
             chip = new Chip(3, "Azul 3");
+            BlueChips.Add(chip);
             chip = new Chip(4, "Azul 4");
             BlueChips.Add(chip);
 
             chip = new Chip(1, "Verde 1");
+            GreenChips.Add(chip);
             chip = new Chip(2, "Verde 2");
+            GreenChips.Add(chip);
             chip = new Chip(3, "Verde 3");
+            GreenChips.Add(chip);
             chip = new Chip(4, "Verde 4");
             GreenChips.Add(chip);
 
             chip = new Chip(1, "Amarillo 1");
+            YellowChips.Add(chip);
             chip = new Chip(2, "Amarillo 2");
+            YellowChips.Add(chip);
             chip = new Chip(3, "Amarillo 3");
+            YellowChips.Add(chip);
             chip = new Chip(4, "Amarillo 4");
             YellowChips.Add(chip);
 
