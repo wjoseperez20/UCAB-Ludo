@@ -105,6 +105,8 @@ namespace LudoServer.Common.Entities
 
             chipToMove.CalculatePosition(player.ResultDice);
 
+            ManageTurn();
+
             player.SendMessage(new Output_MoveChip(player, chipToMove));
 
 

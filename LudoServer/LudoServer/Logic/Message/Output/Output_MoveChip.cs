@@ -13,8 +13,10 @@ namespace LudoServer.Logic.Message.Output
         public Output_MoveChip(Player player, Chip chip)
         {
             AddElement(OutputCipher.Output_Move_Chip.ToString());
+            AddElement(player.Id.ToString());
             AddElement(chip.Id.ToString());
             AddElement(chip.Position.ToString());
+            AddElement(Game.GetGame.GetActiveTurnPlayer().Id.ToString());
         }
     }
 }
