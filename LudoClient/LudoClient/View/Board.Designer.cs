@@ -446,9 +446,9 @@
             this.label2.Location = new System.Drawing.Point(11, 598);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(327, 13);
+            this.label2.Size = new System.Drawing.Size(365, 13);
             this.label2.TabIndex = 29;
-            this.label2.Text = "Recuerde: El 1 y el 6 permiten desbloquear una ficha o volver a tirar";
+            this.label2.Text = "Recuerde: El 6 permite desbloquear una ficha o volver a tirar la ficha actual.";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // noteLabel
