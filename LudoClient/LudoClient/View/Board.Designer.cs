@@ -469,7 +469,7 @@
             // Board
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(977, 703);
+            this.ClientSize = new System.Drawing.Size(977, 706);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonChip4);
             this.Controls.Add(this.buttonChip3);

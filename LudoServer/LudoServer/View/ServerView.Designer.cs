@@ -52,13 +52,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.powerOffButton = new System.Windows.Forms.Button();
+            this.comboCountPlayer = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.monitorLogs = new System.Windows.Forms.TextBox();
             this.titleServer = new System.Windows.Forms.Label();
             this.eyesLabel = new System.Windows.Forms.Label();
             this.selloUcabLabel = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.comboCountPlayer = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -73,7 +73,7 @@
             this.powerOnButton.Image = global::LudoServer.Properties.Resources.power_button;
             this.powerOnButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.powerOnButton.Location = new System.Drawing.Point(221, 28);
-            this.powerOnButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.powerOnButton.Margin = new System.Windows.Forms.Padding(2);
             this.powerOnButton.Name = "powerOnButton";
             this.powerOnButton.Size = new System.Drawing.Size(188, 54);
             this.powerOnButton.TabIndex = 0;
@@ -250,7 +250,7 @@
             this.startGameButton.Image = global::LudoServer.Properties.Resources.multiple_users_silhouette;
             this.startGameButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.startGameButton.Location = new System.Drawing.Point(32, 126);
-            this.startGameButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.startGameButton.Margin = new System.Windows.Forms.Padding(2);
             this.startGameButton.Name = "startGameButton";
             this.startGameButton.Size = new System.Drawing.Size(172, 54);
             this.startGameButton.TabIndex = 17;
@@ -298,7 +298,7 @@
             this.powerOffButton.Image = global::LudoServer.Properties.Resources.power_off;
             this.powerOffButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.powerOffButton.Location = new System.Drawing.Point(221, 126);
-            this.powerOffButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.powerOffButton.Margin = new System.Windows.Forms.Padding(2);
             this.powerOffButton.Name = "powerOffButton";
             this.powerOffButton.Size = new System.Drawing.Size(188, 54);
             this.powerOffButton.TabIndex = 21;
@@ -306,6 +306,19 @@
             this.powerOffButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.powerOffButton.UseVisualStyleBackColor = true;
             this.powerOffButton.Click += new System.EventHandler(this.powerOffButton_Click);
+            // 
+            // comboCountPlayer
+            // 
+            this.comboCountPlayer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCountPlayer.FormattingEnabled = true;
+            this.comboCountPlayer.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4"});
+            this.comboCountPlayer.Location = new System.Drawing.Point(132, 62);
+            this.comboCountPlayer.Name = "comboCountPlayer";
+            this.comboCountPlayer.Size = new System.Drawing.Size(64, 21);
+            this.comboCountPlayer.TabIndex = 18;
             // 
             // panel5
             // 
@@ -366,24 +379,11 @@
             this.panel6.Size = new System.Drawing.Size(252, 69);
             this.panel6.TabIndex = 22;
             // 
-            // comboCountPlayer
-            // 
-            this.comboCountPlayer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboCountPlayer.FormattingEnabled = true;
-            this.comboCountPlayer.Items.AddRange(new object[] {
-            "2",
-            "3",
-            "4"});
-            this.comboCountPlayer.Location = new System.Drawing.Point(132, 62);
-            this.comboCountPlayer.Name = "comboCountPlayer";
-            this.comboCountPlayer.Size = new System.Drawing.Size(64, 21);
-            this.comboCountPlayer.TabIndex = 18;
-            // 
             // ServerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1125, 645);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -391,7 +391,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ServerView";
             this.Text = "Server Ludo UCAB";
             this.Load += new System.EventHandler(this.ServerView_Load);
